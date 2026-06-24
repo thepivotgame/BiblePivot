@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>PIVOT</title>
-    <script data-goatcounter="https://pivot.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://pivot-votd.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <style>
     * {
         box-sizing: border-box;
@@ -56,7 +56,6 @@
         max-height: 120px;
         opacity: 1;
     }
-
 
 
     .card {
@@ -822,16 +821,17 @@
     // P is populated from Google Sheets at runtime by loadAndStart() below.
     // The fallback below is only used if the fetch fails.
     const FALLBACK_P = {
-        theme: "GARDEN",
-        words: ["BLOOM", "PRUNE", "MULCH", "ROSE", "WEED", "SEED", "PLOT"],
+        theme: "GLORY",
+        words: ["GLORY", "WORTH", "GROAN", "DECAY", "EAGER", "HOPE", "WAIT"],
         SIZE: 6,
-        target: "BLUSH",
-        pivot: "ROSE",
-        noise: "AEITNOLCMP",
-        latHint: "Think colour, not flowers.",
-        pivHint: "ROSE is a flower — but it's also a colour. What shade of pink does it describe?",
-        winText: "A rosy pink. ROSE was the pivot — the flower becomes a colour.",
-        lossText: "BLUSH — a soft rosy pink. ROSE was the pivot: flower to colour.",
+        target: "HONOR",
+        pivot: "GLORY",
+        noise: "AEIOBRCTNS",
+        latHint: "Seven words from Romans 8 — Paul's picture of a creation suffering, waiting, and longing for what's coming.",
+        pivHint: "Paul uses this word for God's ultimate reveal — but it's also what the world gives its celebrities and champions. What do we call that?",
+        winText: "GLORY was the pivot. In Romans 8 it means the divine splendour God will reveal in us. But glory also means the honour the world hands out. Paul says one is worth infinitely more.",
+        lossText: "The pivot was GLORY — Paul's word for what God will reveal in us. But glory also means the honour the world gives its champions. The target was HONOR.",
+        gridString: "EAGEROWYACEDAORNIEIGROANTSTTLANEPOHG",
     };
     let P = null;
 
@@ -840,7 +840,7 @@
     // Column order: date, theme, word1..word7, pivot, target, noise,
     //               latHint, pivHint, winText, lossText  (columns A–P)
     const SHEET_CSV_URL =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vTxPC3Ind1OHfoqz87q0LmRJVYnAmD3XUYBk5gBuTYfoeZ59wOAoqaLA_RdolsZaUCsrfPRqFi9zAtX/pub?gid=1830587129&single=true&output=csv";
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4aw6hHMSLlRzrEokb_UwqNyNgWbvA-pJ8cQkvFUjy6BF8u-gAjdJIxUcy0lnQIg4SOFr_RWN3exEQ/pub?gid=76516549&single=true&output=csv";
 
     function todayISO() {
         const d = new Date();
@@ -1579,7 +1579,7 @@
         slot.state = 'used';
         renderPool();
         renderGuessDisplay();
-       if (guessSlots.length === P.target.length) {
+        if (guessSlots.length === P.target.length) {
             // Word is complete — user must click Enter to submit
         }
     }
@@ -1728,7 +1728,7 @@
         // restrictions just mean this feature silently doesn't persist —
         // never breaks the game itself.
         try {
-            localStorage.setItem('pivot_result', JSON.stringify({
+            localStorage.setItem('pivot_result_votd', JSON.stringify({
                 date: todayISO(),
                 won: won,
                 pastGuesses: pastGuesses,
@@ -1747,9 +1747,9 @@
     }
     // ── MID-GAME PROGRESS SAVE/RESTORE ──────────────────────────────────────────
     function saveProgress() {
-        if (gameOver) return; // finished games are handled by saveTodayResult()
+        if (gameOver) return;
         try {
-            localStorage.setItem('pivot_progress', JSON.stringify({
+            localStorage.setItem('pivot_progress_votd', JSON.stringify({
                 date: todayISO(),
                 stage: stage,
                 wordSearchDone: wordSearchDone,
@@ -1772,15 +1772,14 @@
                 usedPiv: usedPiv,
                 p2HintLocked: p2HintLocked
             }));
-        } catch (e) { /* storage unavailable */ }
+        } catch (e) {}
     }
 
     function clearProgress() {
-        try { localStorage.removeItem('pivot_progress'); } catch (e) {}
+        try { localStorage.removeItem('pivot_progress_votd'); } catch (e) {}
     }
 
     function restoreProgress(saved) {
-        // Restore all state variables
         SZ = saved.grid.length;
         grid = saved.grid;
         stage = saved.stage || 1;
@@ -1801,17 +1800,15 @@
         usedPiv = saved.usedPiv || false;
         p2HintLocked = saved.p2HintLocked || false;
 
-        // Restore pool
         pool.length = 0;
         (saved.pool || []).forEach(s => pool.push(s));
         guessSlots = saved.guessSlots || [];
 
-        // Re-derive placements from the grid (same logic as loadGridFromString)
         const pl = {};
         const DIRS8 = [[0,1],[0,-1],[1,0],[-1,0],[1,1],[1,-1],[-1,1],[-1,-1]];
         for (const word of P.words) {
             let found = false;
-            outer: for (let r = 0; r < SZ && !found; r++) {
+            for (let r = 0; r < SZ && !found; r++) {
                 for (let c = 0; c < SZ && !found; c++) {
                     for (const [dr, dc] of DIRS8) {
                         let match = true;
@@ -1831,7 +1828,6 @@
         placements = pl;
         WORDBANK.add(P.target.toUpperCase());
 
-        // Restore UI
         if (gameStarted) document.body.classList.add('playing');
 
         const s1 = document.getElementById('s1');
@@ -2432,7 +2428,7 @@
             s2.style.display = '';
             const note = document.createElement('p');
             note.style.cssText = 'text-align:center;color:#a8c8e8;font-size:13px;margin:0 0 14px;line-height:1.5;';
-            note.textContent = "You've already played today's PIVOT — here's how it went. Come back tomorrow for a new puzzle.";
+            note.textContent = "You've already played today's PIVOT — here's how it went. Come back tomorrow for a new Verse of the Day puzzle.";
             s2.insertBefore(note, s2.firstChild);
         }
 
@@ -2453,17 +2449,16 @@
 
         let saved = null;
         try {
-            saved = JSON.parse(localStorage.getItem('pivot_result') || 'null');
+            saved = JSON.parse(localStorage.getItem('pivot_result_votd') || 'null');
         } catch (e) {
             saved = null;
         }
         if (saved && saved.date === todayISO()) {
             showAlreadyPlayed(saved);
         } else {
-            // Check for an in-progress game from today
             let progress = null;
             try {
-                progress = JSON.parse(localStorage.getItem('pivot_progress') || 'null');
+                progress = JSON.parse(localStorage.getItem('pivot_progress_votd') || 'null');
             } catch (e) { progress = null; }
             if (progress && progress.date === todayISO()) {
                 restoreProgress(progress);
