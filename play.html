@@ -2511,7 +2511,7 @@
     <!-- ── Scrollable body: passage + VOTD ── -->
     <div style="flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:1.25rem 1.25rem 1.5rem;">
 
-      <div id="narr-passage" style="font-size:18px;line-height:2.4;color:#e8e4d9;"></div>
+      <div id="narr-passage" style="font-size:17px;line-height:1.85;color:#e8e4d9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;"></div>
 
       <!-- VOTD — revealed after narration ends -->
       <div id="narr-votd" style="display:none;margin-top:1.5rem;padding:1rem 1.25rem;border-left:3px solid #e8b84b;background:#1a1a38;border-radius:0 8px 8px 0;">
@@ -2527,7 +2527,7 @@
 
 <style>
   /* Narration token styles */
-  .ntok { display:inline; padding:2px 1px; border-radius:3px; transition:background 0.08s,color 0.08s; }
+  .ntok { display:inline; padding:1px 1px; border-radius:3px; transition:background 0.08s,color 0.08s; }
   .ntok.nactive { background:#e8b84b; color:#1a1200; border-radius:4px; }
   .ntok.nspoken { color:#55527a; }
   .ntok.npuzzle.nspoken { color:#e8b84b; font-weight:bold; }
@@ -2550,17 +2550,37 @@ function narrPuzzleMatch(clean) {
 
 let narrWordSpans = [], narrAllSpans = [], narrPlaying = false;
 let narrUtterance = null, narrEndTimer = null, narrBuilt = false;
+let narrOpenCount = 0;    // times modal has been opened
+let narrLastWord  = 0;    // word index to resume from
+let narrCurrentWord = 0;  // tracks current word during playback
+let narrCompleted = false;// true once narration finished end-to-end
 
 function openNarration() {
   const overlay = document.getElementById('narr-overlay');
   overlay.style.display = 'flex';
   document.body.style.overflow = 'hidden';
   if (!narrBuilt) buildNarration();
-  // Small delay so DOM is ready before speech starts
-  setTimeout(narrToggle, 200);
+  narrOpenCount++;
+
+  if (narrOpenCount === 1) {
+    // First open — autoplay from beginning
+    setTimeout(narrToggle, 200);
+  } else {
+    // Second+ open — no autoplay; show all puzzle words gold for browsing
+    narrAllSpans.forEach(s => s.classList.remove('nactive'));
+    // Mark up to last word as spoken so gold words show correctly
+    if (narrLastWord > 0) narrMarkSpoken(narrLastWord);
+    // If completed show VOTD
+    if (narrCompleted) {
+      narrMarkAllSpoken();
+      document.getElementById('narr-votd').style.display = 'block';
+    }
+  }
 }
 
 function closeNarration() {
+  // Record position before stopping
+  narrLastWord = narrCurrentWord;
   // Always stop audio immediately
   if (narrEndTimer) { clearInterval(narrEndTimer); narrEndTimer = null; }
   speechSynthesis.cancel();
@@ -2568,7 +2588,6 @@ function closeNarration() {
   document.getElementById('narr-playlabel').textContent = 'Play';
   document.getElementById('narr-playpath').setAttribute('d','M3 2.5l10 5.5-10 5.5z');
   document.getElementById('narr-status').textContent = '';
-  // Hide overlay
   document.getElementById('narr-overlay').style.display = 'none';
   document.body.style.overflow = '';
 }
@@ -2654,6 +2673,7 @@ function narrSpansForWord(wi) {
 }
 
 function narrMarkSpoken(cur) {
+  narrCurrentWord = cur;
   narrWordSpans.forEach((_,wi) => {
     const spans = narrSpansForWord(wi);
     if (wi < cur)      spans.forEach(s=>{s.classList.remove('nactive');s.classList.add('nspoken');});
@@ -2675,13 +2695,22 @@ function narrFinished() {
   if (narrEndTimer) { clearInterval(narrEndTimer); narrEndTimer=null; }
   if (!narrPlaying) return;
   narrPlaying = false;
+  narrCompleted = true;
+  narrLastWord  = 0;
+  narrCurrentWord = 0;
   document.getElementById('narr-playlabel').textContent = 'Play';
   document.getElementById('narr-playpath').setAttribute('d','M3 2.5l10 5.5-10 5.5z');
   document.getElementById('narr-status').textContent = '';
   narrMarkAllSpoken();
+  // Record completion in localStorage (keyed to today's date)
+  try {
+    const today = new Date().toISOString().slice(0,10);
+    localStorage.setItem('pivot_narr_listened_votd', JSON.stringify({ date: today, completed: true }));
+  } catch(e) {}
+  // Reveal VOTD
   const votdBlock = document.getElementById('narr-votd');
   votdBlock.style.display = 'block';
-  votdBlock.scrollIntoView({ behavior:'smooth', block:'nearest' });
+  setTimeout(() => votdBlock.scrollIntoView({ behavior:'smooth', block:'nearest' }), 100);
 }
 
 function narrStop(reset) {
@@ -2695,9 +2724,8 @@ function narrStop(reset) {
 }
 
 function narrToggle() {
-  if (narrPlaying) { narrStop(true); return; }
+  if (narrPlaying) { narrStop(false); return; }  // Stop but keep highlights
   speechSynthesis.cancel();
-  narrReset();
 
   const segs = [
     "I consider that our present sufferings are not worth comparing with the glory that will be revealed in us.",
@@ -2712,7 +2740,20 @@ function narrToggle() {
   const fullText = segs.join(' ');
   const allWords = fullText.split(' ');
 
-  narrUtterance = new SpeechSynthesisUtterance(fullText);
+  // Build resume text: if we stopped partway, skip words already spoken
+  let resumeFrom = narrLastWord; // word index to resume from
+  let charOffset  = 0;
+  if (resumeFrom > 0 && !narrCompleted) {
+    for (let i = 0; i < resumeFrom; i++) charOffset += allWords[i].length + 1;
+  } else {
+    resumeFrom = 0;
+    charOffset = 0;
+    narrReset(); // fresh start
+  }
+
+  const resumeText = fullText.slice(charOffset);
+
+  narrUtterance = new SpeechSynthesisUtterance(resumeText);
   narrUtterance.rate = parseFloat(document.getElementById('narr-speed').value);
 
   const voices = speechSynthesis.getVoices();
@@ -2723,26 +2764,30 @@ function narrToggle() {
     || voices.find(v=>v.lang.startsWith('en'))
     || voices[0];
 
+  // resumeText word list for boundary mapping
+  const resumeWords = resumeText.split(' ');
+
   narrUtterance.onboundary = function(e) {
     if (e.name!=='word') return;
-    let cum=0, found=allWords.length-1;
-    for (let i=0;i<allWords.length;i++) {
-      if (cum===e.charIndex){found=i;break;}
-      if (cum>e.charIndex){found=Math.max(0,i-1);break;}
-      cum+=allWords[i].length+1;
+    let cum=0, foundLocal=resumeWords.length-1;
+    for (let i=0;i<resumeWords.length;i++) {
+      if (cum===e.charIndex){foundLocal=i;break;}
+      if (cum>e.charIndex){foundLocal=Math.max(0,i-1);break;}
+      cum+=resumeWords[i].length+1;
     }
-    narrMarkSpoken(found);
-    const el=document.getElementById('nw'+found);
+    const globalIdx = resumeFrom + foundLocal;
+    narrMarkSpoken(globalIdx);
+    const el=document.getElementById('nw'+globalIdx);
     if (el) el.scrollIntoView({behavior:'smooth',block:'nearest'});
   };
 
-  narrUtterance.onend = narrFinished;
+  narrUtterance.onend   = narrFinished;
   narrUtterance.onerror = narrFinished;
 
   narrPlaying = true;
   document.getElementById('narr-playlabel').textContent = 'Stop';
   document.getElementById('narr-playpath').setAttribute('d','M3 2h3.5v12H3zm6.5 0H13v12H9.5z');
-  document.getElementById('narr-status').textContent = 'Playing…';
+  document.getElementById('narr-status').textContent = resumeFrom > 0 ? 'Resuming…' : 'Playing…';
   speechSynthesis.speak(narrUtterance);
 
   // Safari onend fallback
