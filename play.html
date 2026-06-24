@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>PIVOT</title>
-    <script data-goatcounter="https://pivot-votd.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://pivot.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <style>
     * {
         box-sizing: border-box;
@@ -56,6 +56,7 @@
         max-height: 120px;
         opacity: 1;
     }
+
 
 
     .card {
@@ -730,7 +731,7 @@
                             <path d="M9 2 L9 16 M3 11 L9 18 L15 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <button onclick="window.open('index.html','_blank')" style="background:#f9d976;color:#0d3349;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:bold;letter-spacing:1px;cursor:pointer;">Instructions</button>
+                    <a href="index.html" target="_blank" style="background:#f9d976;color:#0d3349;border:none;border-radius:9px;padding:9px 13px;font-size:12px;font-weight:bold;letter-spacing:1px;cursor:pointer;min-height:42px;font-family:Georgia,serif;touch-action:manipulation;text-decoration:none;display:inline-flex;align-items:center;">Instructions</a>
                 </div>
             </div>
         </div>
@@ -821,17 +822,16 @@
     // P is populated from Google Sheets at runtime by loadAndStart() below.
     // The fallback below is only used if the fetch fails.
     const FALLBACK_P = {
-        theme: "GLORY",
-        words: ["GLORY", "WORTH", "GROAN", "DECAY", "EAGER", "HOPE", "WAIT"],
+        theme: "GARDEN",
+        words: ["BLOOM", "PRUNE", "MULCH", "ROSE", "WEED", "SEED", "PLOT"],
         SIZE: 6,
-        target: "HONOR",
-        pivot: "GLORY",
-        noise: "AEIOBRCTNS",
-        latHint: "Seven words from Romans 8 — Paul's picture of a creation suffering, waiting, and longing for what's coming.",
-        pivHint: "Paul uses this word for God's ultimate reveal — but it's also what the world gives its celebrities and champions. What do we call that?",
-        winText: "GLORY was the pivot. In Romans 8 it means the divine splendour God will reveal in us. But glory also means the honour the world hands out. Paul says one is worth infinitely more.",
-        lossText: "The pivot was GLORY — Paul's word for what God will reveal in us. But glory also means the honour the world gives its champions. The target was HONOR.",
-        gridString: "EAGEROWYACEDAORNIEIGROANTSTTLANEPOHG",
+        target: "BLUSH",
+        pivot: "ROSE",
+        noise: "AEITNOLCMP",
+        latHint: "Think colour, not flowers.",
+        pivHint: "ROSE is a flower — but it's also a colour. What shade of pink does it describe?",
+        winText: "A rosy pink. ROSE was the pivot — the flower becomes a colour.",
+        lossText: "BLUSH — a soft rosy pink. ROSE was the pivot: flower to colour.",
     };
     let P = null;
 
@@ -840,7 +840,7 @@
     // Column order: date, theme, word1..word7, pivot, target, noise,
     //               latHint, pivHint, winText, lossText  (columns A–P)
     const SHEET_CSV_URL =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4aw6hHMSLlRzrEokb_UwqNyNgWbvA-pJ8cQkvFUjy6BF8u-gAjdJIxUcy0lnQIg4SOFr_RWN3exEQ/pub?gid=76516549&single=true&output=csv";
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vTxPC3Ind1OHfoqz87q0LmRJVYnAmD3XUYBk5gBuTYfoeZ59wOAoqaLA_RdolsZaUCsrfPRqFi9zAtX/pub?gid=1830587129&single=true&output=csv";
 
     function todayISO() {
         const d = new Date();
@@ -1577,7 +1577,7 @@
         slot.state = 'used';
         renderPool();
         renderGuessDisplay();
-        if (guessSlots.length === P.target.length) {
+       if (guessSlots.length === P.target.length) {
             // Word is complete — user must click Enter to submit
         }
     }
@@ -1725,7 +1725,7 @@
         // restrictions just mean this feature silently doesn't persist —
         // never breaks the game itself.
         try {
-            localStorage.setItem('pivot_result_votd', JSON.stringify({
+            localStorage.setItem('pivot_result', JSON.stringify({
                 date: todayISO(),
                 won: won,
                 pastGuesses: pastGuesses,
@@ -2300,7 +2300,7 @@
             s2.style.display = '';
             const note = document.createElement('p');
             note.style.cssText = 'text-align:center;color:#a8c8e8;font-size:13px;margin:0 0 14px;line-height:1.5;';
-            note.textContent = "You've already played today's PIVOT — here's how it went. Come back tomorrow for a new Verse of the Day puzzle.";
+            note.textContent = "You've already played today's PIVOT — here's how it went. Come back tomorrow for a new puzzle.";
             s2.insertBefore(note, s2.firstChild);
         }
 
@@ -2321,7 +2321,7 @@
 
         let saved = null;
         try {
-            saved = JSON.parse(localStorage.getItem('pivot_result_votd') || 'null');
+            saved = JSON.parse(localStorage.getItem('pivot_result') || 'null');
         } catch (e) {
             saved = null;
         }
