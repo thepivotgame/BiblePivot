@@ -2565,6 +2565,10 @@ function openNarration() {
   narrOpenCount++;
   sessionStorage.setItem('narrOpenCount', narrOpenCount);
 
+  // DEBUG — remove once fixed
+  console.log('openNarration #' + narrOpenCount + ' lastWord=' + narrLastWord + ' completed=' + narrCompleted + ' currentWord=' + narrCurrentWord);
+  document.getElementById('narr-status').textContent = '#' + narrOpenCount + ' last=' + narrLastWord + ' done=' + narrCompleted;
+
   if (narrOpenCount === 1) {
     // First open — autoplay from beginning
     setTimeout(narrToggle, 200);
