@@ -2829,12 +2829,9 @@ function narrToggle() {
   narrUtterance.rate = parseFloat(document.getElementById('narr-speed').value);
 
   const voices = speechSynthesis.getVoices();
-  narrUtterance.voice = voices.find(v=>v.name==='Karen')
-    || voices.find(v=>v.name.includes('Karen'))
-    || voices.find(v=>v.lang==='en-AU')
-    || voices.find(v=>v.lang.startsWith('en-GB'))
-    || voices.find(v=>v.lang.startsWith('en'))
-    || voices[0];
+  narrUtterance.voice = voices.find(v => v.lang.startsWith('en') && v.localService)
+  || voices.find(v => v.lang.startsWith('en'))
+  || voices[0];
 
   // resumeText word list for boundary mapping
   const resumeWords = resumeText.split(' ');
