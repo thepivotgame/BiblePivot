@@ -853,13 +853,27 @@
     const SHEET_CSV_URL =
         "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4aw6hHMSLlRzrEokb_UwqNyNgWbvA-pJ8cQkvFUjy6BF8u-gAjdJIxUcy0lnQIg4SOFr_RWN3exEQ/pub?gid=76516549&single=true&output=csv";
 
-    function todayISO() {
-        const d = new Date();
-        const y = d.getFullYear();
-        const m = String(d.getMonth() + 1).padStart(2, '0');
-        const day = String(d.getDate()).padStart(2, '0');
-        return y + '-' + m + '-' + day;
+function todayISO() {
+    // TEST MODE: append ?test=true&date=YYYY-MM-DD to URL to override today's date
+    // To revert: delete the 4 lines below (params declaration through closing brace)
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('test') && params.get('date')) {
+        return params.get('date');
     }
+
+    // ORIGINAL FUNCTION — do not delete
+    // const d = new Date();
+    // const y = d.getFullYear();
+    // const m = String(d.getMonth() + 1).padStart(2, '0');
+    // const day = String(d.getDate()).padStart(2, '0');
+    // return y + '-' + m + '-' + day;
+
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return y + '-' + m + '-' + day;
+}
 
     function parseCSV(text) {
         // Minimal CSV parser — handles quoted fields with commas inside.
