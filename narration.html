@@ -152,6 +152,10 @@ function closeNarration() {
   document.getElementById('narr-status').textContent = '';
   document.getElementById('narr-overlay').style.display = 'none';
   document.body.style.overflow = '';
+  // If loaded inside play.html's frame, tell the parent page to hide the frame too.
+  if (window.self !== window.top) {
+    window.parent.postMessage('narrClose', '*');
+  }
 }
 
 function buildNarration() {
@@ -374,6 +378,14 @@ function narrToggle() {
 document.getElementById('narr-overlay').addEventListener('click', function(e) {
   if (e.target === this) closeNarration();
 });
+
+// If loaded inside play.html's frame (?embed=1), skip the standalone launch
+// button and open the reading view immediately — same experience as before.
+if (new URLSearchParams(window.location.search).get('embed') === '1') {
+  const launchBtn = document.getElementById('narr-launch');
+  if (launchBtn) launchBtn.style.display = 'none';
+  openNarration();
+}
 </script>
 
 </body>

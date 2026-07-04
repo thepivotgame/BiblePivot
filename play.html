@@ -7,6 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>PIVOT</title>
+    <script>
+      // Don't count test-mode plays in GoatCounter analytics.
+      // (?test=true&date=... in the URL = testing, not a real visitor)
+      window.goatcounter = {
+        no_onload: new URLSearchParams(window.location.search).get('test') === 'true'
+      };
+    </script>
     <script data-goatcounter="https://pivot-votd.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <style>
     * {
@@ -833,7 +840,7 @@
                             <path d="M9 2 L9 16 M3 11 L9 18 L15 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <button onclick="window.open('narration.html','_blank')" style="background:#e8b84b;color:#1a1200;border:2px solid #c49020;border-radius:9px;padding:9px 13px;font-size:12px;font-weight:bold;letter-spacing:1px;cursor:pointer;min-height:42px;font-family:Georgia,serif;touch-action:manipulation;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(232,184,75,0.4);">🎧 Listen</button>
+                    <button onclick="openNarrationFrame()" style="background:#e8b84b;color:#1a1200;border:2px solid #c49020;border-radius:9px;padding:9px 13px;font-size:12px;font-weight:bold;letter-spacing:1px;cursor:pointer;min-height:42px;font-family:Georgia,serif;touch-action:manipulation;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(232,184,75,0.4);">🎧 Listen</button>
                     <a href="index.html" target="_blank" rel="noopener" style="background:#f9d976;color:#0d3349;border:none;border-radius:9px;padding:9px 13px;font-size:12px;font-weight:bold;letter-spacing:1px;cursor:pointer;min-height:42px;font-family:Georgia,serif;touch-action:manipulation;text-decoration:none;display:inline-flex;align-items:center;">Instructions</a>
                 </div>
             </div>
@@ -2690,6 +2697,24 @@
     window.addEventListener('resize', renderGrid);
     </script>
 
+<!-- Narration frame — loads narration.html in the same window, full-screen,
+     so it looks and behaves like the old in-page modal. -->
+<div id="narr-frame-wrap" style="display:none;position:fixed;inset:0;z-index:9000;">
+  <iframe id="narr-frame" src="" style="width:100%;height:100%;border:0;"></iframe>
+</div>
+<script>
+function openNarrationFrame() {
+    const wrap = document.getElementById('narr-frame-wrap');
+    const frame = document.getElementById('narr-frame');
+    if (!frame.src) frame.src = 'narration.html?embed=1';
+    wrap.style.display = 'block';
+}
+window.addEventListener('message', function (e) {
+    if (e.data === 'narrClose') {
+        document.getElementById('narr-frame-wrap').style.display = 'none';
+    }
+});
+</script>
 
 </body>
 </html>
