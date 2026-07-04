@@ -16,7 +16,7 @@
     if (fromInstructions) return;
     var saved = JSON.parse(localStorage.getItem('pivot_result_votd') || 'null');
     if (saved) {
-        window.location.replace('play.html');
+        window.location.replace('play.html' + window.location.search);
     }
     } catch (e) {}
 })();
@@ -415,9 +415,21 @@
         </div>
     </div>
 
-    <a href="play.html" class="cta">Let's Play →</a>
+    <a href="play.html" id="play-cta" class="cta">Let's Play →</a>
 
     <p class="footer">PIVOT · DAILY PUZZLE</p>
+
+    <script>
+    // Carry test-mode params (?test=true&date=...) forward to play.html,
+    // stripping the howto=1 flag since that's only meant for index.html.
+    (function () {
+        var params = new URLSearchParams(window.location.search);
+        params.delete('howto');
+        var qs = params.toString();
+        var link = document.getElementById('play-cta');
+        if (link && qs) link.href = 'play.html?' + qs;
+    })();
+    </script>
 
 </body>
 </html>

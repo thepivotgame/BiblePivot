@@ -2711,6 +2711,10 @@ function openNarrationFrame() {
     if (!narrFrameLoaded) {
         frame.src = 'narration.html?embed=1';
         narrFrameLoaded = true;
+    } else {
+        // Frame already loaded once before — tell it to reopen the reading view
+        // (closing it earlier only hid its internal overlay, it didn't reload).
+        try { frame.contentWindow.postMessage('narrOpen', '*'); } catch (e) {}
     }
     wrap.style.display = 'block';
 }

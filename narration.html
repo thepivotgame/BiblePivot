@@ -386,6 +386,12 @@ if (new URLSearchParams(window.location.search).get('embed') === '1') {
   if (launchBtn) launchBtn.style.display = 'none';
   openNarration();
 }
+
+// Reopen when the parent page (play.html) asks us to — happens on every
+// Listen click after the first, since the frame stays loaded in the background.
+window.addEventListener('message', function (e) {
+  if (e.data === 'narrOpen') openNarration();
+});
 </script>
 
 </body>
