@@ -12,7 +12,8 @@
 (function () {
     try {
     var saved = JSON.parse(localStorage.getItem('pivot_result_votd') || 'null');
-    if (saved) {
+    var todayStr = new Date().toISOString().slice(0,10);
+    if (saved && saved.date === todayStr) {
         window.location.replace('play.html');
     }
     } catch (e) {}
