@@ -2748,6 +2748,7 @@ function narrPuzzleMatch(clean) {
 
 let narrWordSpans = [], narrAllSpans = [], narrPlaying = false;
 let narrUtterance = null, narrEndTimer = null, narrBuilt = false;
+let NARR_PUZZLE = {};
 let narrUserStopped = false; // true when user manually stops — prevents poller misfiring
 // Persist narration state across page reloads via sessionStorage
 let narrOpenCount   = parseInt(sessionStorage.getItem('narrOpenCount') || '0');
@@ -2799,7 +2800,7 @@ function buildNarration() {
   narrBuilt = true;
 
   // Build the highlight word list from today's actual puzzle words
-  const NARR_PUZZLE = {};
+NARR_PUZZLE = {};
   if (typeof P !== 'undefined' && Array.isArray(P.words)) {
     P.words.forEach(w => {
       NARR_PUZZLE[w.toLowerCase()] = w.length;
