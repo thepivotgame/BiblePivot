@@ -2387,15 +2387,15 @@
         const p2Guesses = p2EventLog.filter(e => e.type === 'guess').length;
         let performanceLine = '';
         if (hints === 0) {
-            performanceLine = 'No hints used. \n😇 😇 😇';
+            performanceLine = 'No hints used. 😇 😇 😇';
         } else if (hints === 1) {
-            performanceLine = 'Only 1 hint used. \n😇 😇';
+            performanceLine = 'Only 1 hint used. 😇 😇';
         } else if (hints === 2) {
-            performanceLine = 'Just 2 hints used. \n😇';
+            performanceLine = 'Just 2 hints used. 😇';
         } else if (hints === 3 ) {
-            performanceLine = 'Phew! I made it with 3 hints!! \n😅';
+            performanceLine = 'Phew! I made it with 3 hints!! 😅';
         } else if (hints > 3) {
-            performanceLine = 'Oh-oh.. ' + hints + ' hints used, but I finished! \n🙏';
+            performanceLine = 'Oh-oh.. ' + hints + ' hints used, but I finished! 🙏';
         }
         const perfSuffix = performanceLine ? '\n' + performanceLine : '';
         return 'PIVOT: Verse of the Day\n' + P.votdRef + perfSuffix + '\n' + p1Emoji + '\n' + guessEmoji  + '\nhttps://tinyurl.com/YouVersionTest';
