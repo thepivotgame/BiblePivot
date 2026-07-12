@@ -2736,8 +2736,11 @@
 <script>
 // ── Narration modal ───────────────────────────────────────────────────────────
 
-// Puzzle word roots and their highlight length
-const NARR_PUZZLE = { glory:5, worth:5, groan:5, saved:5, eager:5, hope:4, wait:4 };
+// Puzzle word roots and their highlight length.
+// This used to be a hardcoded const (Romans 8 words only), which meant it silently
+// went stale on every other day's puzzle. It's now rebuilt from the real P.words
+// inside buildNarration() — see there — which runs after P has loaded.
+let NARR_PUZZLE = { glory:5, worth:5, groan:5, saved:5, eager:5, hope:4, wait:4 };
 
 function narrPuzzleMatch(clean) {
   for (const [k,len] of Object.entries(NARR_PUZZLE)) {
@@ -2796,6 +2799,11 @@ function closeNarration() {
 
 function buildNarration() {
   narrBuilt = true;
+
+  // Rebuild the puzzle-word highlight list from today's actual search words.
+  if (typeof P !== 'undefined' && P.words && P.words.length) {
+    NARR_PUZZLE = Object.fromEntries(P.words.map(w => [w.toLowerCase(), w.length]));
+  }
 
   // Passage segments — Romans 8:18–25 NIV (static for this puzzle)
   const passageFull = (typeof P !== 'undefined' && P.passageText) ? P.passageText : "I consider that our present sufferings are not worth comparing with the glory that will be revealed in us. For the creation waits in eager expectation for the children of God to be revealed. For the creation was subjected to frustration, not by its own choice, but by the will of the one who subjected it, in hope that the creation itself will be liberated from its bondage to decay and brought into the freedom and glory of the children of God. We know that the whole creation has been groaning as in the pains of childbirth right up to the present time. Not only so, but we ourselves, who have the firstfruits of the Spirit, groan inwardly as we wait eagerly for our adoption to sonship, the redemption of our bodies. For in this hope we were saved. But hope that is seen is no hope at all. Who hopes for what they already have? But if we hope for what we do not yet have, we wait for it patiently.";
