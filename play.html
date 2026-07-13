@@ -928,9 +928,13 @@
     <div id="modal-overlay">
         <div id="modal-box">
             <h3 id="modal-title">🪸 Clue word found!</h3>
-            <p id="modal-body">This word is your clue to Part 2. Jump down now or keep searching to shrink your letter pool.</p>
-            <button class="modal-btn primary" id="modal-jump">→ Jump to Part 2</button>
-            <button class="modal-btn secondary" id="modal-stay">Keep searching</button>
+            <p id="modal-body">This word is your clue to Part 2.</p>
+            <!-- Choice version: shown when more than 2 search words remain unfound. -->
+            <p class="modal-body" id="modal-choice-body">Lock the word search now and move on, or keep searching for the rest?</p>
+            <button class="modal-btn primary" id="modal-jump">→ Advanced: Lock &amp; go to Part 2</button>
+            <button class="modal-btn secondary" id="modal-stay">Classic: Keep searching</button>
+            <!-- No-choice version: shown when 2 or fewer search words remain unfound (auto-locks). -->
+            <p class="modal-body" id="modal-lock-body">Part 1 Word Search is now LOCKED.</p>
         </div>
     </div>
 
@@ -1242,7 +1246,8 @@
         gameOver = false,
         wordSearchDone = false,
         jumpedEarly = false,
-        s2Initialised = false;
+        s2Initialised = false,
+        advancedMode = false; // true = search locked at pivot (auto, or by player's "Advanced" choice); false = classic, still open
     let foundWords = new Set(),
         foundKeys = new Set(),
         pivotCellKeys = new Set();
@@ -1498,6 +1503,15 @@
                 return;
             }
             if (w === P.pivot) {
+                // Pivot found. If 2 or fewer words remain, lock immediately.
+                // If more than 2 remain, leave the search open until the player picks
+                // classic (keep searching) or advanced (lock now) in the modal.
+                const remainingAtPivot = P.words.length - foundWords.size;
+                if (remainingAtPivot <= 2) {
+                    wordSearchDone = true;
+                    document.getElementById('hintbtn').style.display = 'none';
+                }
+                saveProgress();
                 document.getElementById('scroll-down-arrow').style.display = 'flex';
                 setTimeout(showPivotModal, 600);
                 // Always initialise s2 when pivot is found
@@ -1552,6 +1566,16 @@
 
     // ── MODAL ─────────────────────────────────────────────────────────────────────
     function showPivotModal() {
+        // Remaining = words other than the pivot still unfound at this moment.
+        const remaining = P.words.length - foundWords.size;
+        const offerChoice = remaining > 2;
+        document.getElementById('modal-choice-body').style.display = offerChoice ? '' : 'none';
+        document.getElementById('modal-stay').style.display = offerChoice ? '' : 'none';
+        document.getElementById('modal-lock-body').style.display = offerChoice ? 'none' : '';
+        if (!offerChoice) {
+            // 2 or fewer words remain: no real choice to offer, auto-lock.
+            advancedMode = true;
+        }
         document.getElementById('modal-overlay').style.display = 'flex';
     }
     function closeModal() {
@@ -1914,7 +1938,8 @@
                 pastGuesses: pastGuesses,
                 usedLat: usedLat,
                 usedPiv: usedPiv,
-                p2HintLocked: p2HintLocked
+                p2HintLocked: p2HintLocked,
+                advancedMode: advancedMode
             }));
         } catch (e) {}
     }
@@ -1943,6 +1968,7 @@
         usedLat = saved.usedLat || false;
         usedPiv = saved.usedPiv || false;
         p2HintLocked = saved.p2HintLocked || false;
+        advancedMode = saved.advancedMode || false;
 
         pool.length = 0;
         (saved.pool || []).forEach(s => pool.push(s));
@@ -2149,27 +2175,35 @@
     });
 
     // ── MODAL ─────────────────────────────────────────────────────────────────────
-    document.getElementById('modal-jump').addEventListener('touchend', function(e) {
-        e.preventDefault();
+    function chooseAdvanced() {
         closeModal();
+        advancedMode = true;
+        wordSearchDone = true;
+        document.getElementById('hintbtn').style.display = 'none';
         jumpedEarly = true;
         s2Initialised = true;
+        saveProgress();
         goStage2();
+    }
+    document.getElementById('modal-jump').addEventListener('touchend', function(e) {
+        e.preventDefault();
+        chooseAdvanced();
     }, {
         passive: false
     });
     document.getElementById('modal-jump').addEventListener('click', function(e) {
         e.preventDefault();
-        closeModal();
-        jumpedEarly = true;
-        s2Initialised = true;
-        goStage2();
+        chooseAdvanced();
     });
+    // "Keep searching" (classic mode) — only reachable when the modal offered the
+    // choice (i.e. more than 2 words remained unfound), since modal-stay is hidden
+    // otherwise. wordSearchDone stays false, advancedMode stays false.
     document.getElementById('modal-stay').addEventListener('touchend', function(e) {
         e.preventDefault();
         closeModal();
         if (!wordSearchDone) {
             document.getElementById('hintbtn').style.display = '';
+            saveProgress();
             document.getElementById('s1').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }, {
@@ -2180,6 +2214,7 @@
         closeModal();
         if (!wordSearchDone) {
             document.getElementById('hintbtn').style.display = '';
+            saveProgress();
             document.getElementById('s1').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
@@ -2358,8 +2393,9 @@
             }
         });
         const unfoundCount = totalWords - foundOrder.length;
+        const unfoundIcon = advancedMode ? '⭐' : '🔍';
         for (let i = 0; i < unfoundCount; i++) {
-            p1Emoji += '🔍';
+            p1Emoji += unfoundIcon;
         }
 
         // Part 2: one row per guess, with an ℹ️ (or a same-width blank, so
