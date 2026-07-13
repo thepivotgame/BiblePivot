@@ -11,9 +11,8 @@
     <script>
 (function () {
     try {
-    var saved = JSON.parse(localStorage.getItem('pivot_result_votd') || 'null');
-    var todayStr = new Date().toISOString().slice(0,10);
-    if (saved && saved.date === todayStr) {
+    var saved = JSON.parse(localStorage.getItem('pivot_result') || 'null');
+    if (saved) {
         window.location.replace('play.html');
     }
     } catch (e) {}
@@ -71,6 +70,33 @@
         gap: 0;
         flex-shrink: 0;
     }/* Grid label + frame */
+    /* VOTD verse box (mini, matches in-game verse banner) */
+    .verse-box {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 8px 9px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 180px;
+    }
+
+    .verse-text {
+        font-family: Georgia, serif;
+        font-size: 11px;
+        color: #0d3349;
+        line-height: 1.5;
+        margin: 0 0 3px;
+    }
+
+    .verse-ref {
+        font-family: Georgia, serif;
+        font-size: 9px;
+        color: #5a7a95;
+        letter-spacing: 1px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
     .grid-label {
         font-size: 9px;
         letter-spacing: 2px;
@@ -125,6 +151,40 @@
         background: #e8734a;
         color: #fff;
         border-color: #c85a2e;
+    }
+
+    /* Mini hint / listen buttons — shown below the word search */
+    .mini-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 180px;
+        margin-bottom: 4px;
+    }
+
+    .mini-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-family: Georgia, serif;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        border-radius: 7px;
+        padding: 7px 6px;
+    }
+
+    .mini-hint {
+        background: rgba(255, 255, 255, 0.12);
+        color: #f0ede6;
+        border: 1.5px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .mini-listen {
+        background: #e8b84b;
+        color: #1a1200;
+        border: 1.5px solid #c49020;
     }
 
     .section-label {
@@ -273,6 +333,12 @@
         <!-- LEFT col -->
         <div class="left-col">
 
+            <!-- Verse of the Day -->
+            <div class="verse-box">
+                <p class="verse-text">"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."</p>
+                <p class="verse-ref">John 3:16</p>
+            </div>
+
             <!-- Word Search label + framed grid -->
             <p class="grid-label">Word Search</p>
             <div class="grid-frame">
@@ -316,6 +382,13 @@
                 </div>
             </div>
 
+            <!-- Hint + Listen actions -->
+            <div class="mini-actions">
+                <div class="mini-btn mini-hint">Get Hint</div>
+                <div class="mini-btn mini-listen">🎧 Listen</div>
+            </div>
+
+            <div class="step-gap"></div>
             <!-- Letter Inventory -->
             <div style="margin-bottom:8px;">
                 <p class="section-label">
@@ -327,13 +400,22 @@
                     <div class="mp">A</div>
                     <div class="mp">B</div>
                     <div class="mp">E</div>
-                    <div class="mp">I</div>
-                    <div class="mp">M</div>
+                    <div class="mp">F</div>
+                    <div class="mp">G</div>
                 </div>
+                     
                 <div class="pool-row">
+                    <div class="mp">I</div>
+                    <div class="mp">K</div>
+                    <div class="mp">L</div>
+                    <div class="mp">M</div>
                     <div class="mp">N</div>
+                </div>
+                
+                <div class="pool-row">
                     <div class="mp">O</div>
                     <div class="mp">R</div>
+                    <div class="mp">S</div>
                     <div class="mp">T</div>
                     <div class="mp">U</div>
                 </div>
@@ -341,7 +423,7 @@
                     <div class="mp">V</div>
                 </div>
             </div>
-
+            <div class="step-gap"></div>
             <!-- Word Guesses -->
             <div>
                 <p class="section-label">
@@ -378,13 +460,12 @@
                     <span style="font-size:13px;font-weight:bold;color:#2ecc71;letter-spacing:0.5px;">FIND 7 WORDS</span>
                 </div>
                 <p>
-                    Play a word search to find the 
+                    <span style="color:#f0ede6;">Play a word search to find the </span>
                     <strong class="hl">PIVOT WORD</strong>
                     .
                 </p>
             </div>
-
-            <div class="step-gap"></div>
+            
             <div class="step-gap"></div>
 
             <div class="step">
@@ -393,21 +474,49 @@
                     <span style="font-size:13px;font-weight:bold;color:#e8734a;letter-spacing:0.5px;">CRACK THE PIVOT</span>
                 </div>
                 <p>
-                    The 
+                    <span style="color:#f0ede6;">The </span>
                     <strong class="hl">PIVOT WORD</strong>
-                     appears in orange, and unlocks a clue to find the word of the day.
+                    <span style="color:#f0ede6;">appears in </span><span style="color:#e8734a;">orange</span><span style="color:#f0ede6;">, and unlocks a clue to find the word of the day.</span>
                 </p>
             </div>
-
-            <div class="step-gap"></div>
             <div class="step-gap"></div>
 
             <div class="step">
                 <div class="step-header">
-                    <div class="snum" style="background:rgba(255,255,255,0.2);color:#fff;">3</div>
+                    <div class="snum" style="background:#e8b84b;color:#1a1200;">3</div>
+                    <span style="font-size:13px;font-weight:bold;color:#e8b84b;letter-spacing:0.5px;">NEED A CLUE?</span>
+                </div>
+                <p>
+                    <span style="color:#f0ede6;">Not sure which words to look for? Tap </span>
+                    <strong class="hl">Get Hint</strong>
+                    <span style="color:#f0ede6;"> to reveal one, or tap </span>
+                    <strong class="hl">🎧 Listen</strong>
+                    <span style="color:#f0ede6;"> to hear today's passage read aloud, with each word highlighted as it's spoken.</span>
+                </p>
+            </div>
+
+            <div class="step-gap"></div>
+
+         <div class="step">
+                <div class="step-header">
+                    <div class="snum" style="background:#3498db;color:#fff;">4</div>
+                    <span style="font-size:13px;font-weight:bold;color:#3498db;letter-spacing:0.5px;">CHOOSE YOUR LEVEL</span>
+                </div>
+                <p>
+                    <span style="color:#f0ede6;">Choose <strong>CLASSIC</strong> to keep searching or <strong>ADVANCED</strong> to lock the search and earn <strong class="hl">⭐</strong> in your score report.</span>
+
+                    .
+                </p>
+            </div>
+            
+            <div class="step-gap"></div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="snum" style="background:rgba(255,255,255,0.2);color:#fff;">5</div>
                     <span style="font-size:13px;font-weight:bold;color:#fff;letter-spacing:0.5px;">GUESS THE WORD</span>
                 </div>
-                <p>Play like Wordle to find the word of the day.</p>
+                <p><span style="color:#f0ede6;">Play like Wordle to find the word of the day.</span></p>
             </div>
 
         </div>
