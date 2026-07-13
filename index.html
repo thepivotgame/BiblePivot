@@ -156,29 +156,30 @@
     /* Mini hint / listen buttons — shown below the word search */
     .mini-actions {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 6px;
         width: 180px;
         margin-bottom: 4px;
     }
 
     .mini-btn {
+        flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 5px;
+        gap: 4px;
         font-family: Georgia, serif;
         font-size: 10px;
         font-weight: bold;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
         border-radius: 7px;
-        padding: 7px 6px;
+        padding: 7px 4px;
+        white-space: nowrap;
     }
 
     .mini-hint {
-        background: rgba(255, 255, 255, 0.12);
+        background: rgba(52, 152, 219, 0.8);
         color: #f0ede6;
-        border: 1.5px solid rgba(255, 255, 255, 0.28);
     }
 
     .mini-listen {
@@ -335,8 +336,8 @@
 
             <!-- Verse of the Day -->
             <div class="verse-box">
-                <p class="verse-text">"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."</p>
-                <p class="verse-ref">John 3:16</p>
+                <p class="verse-text">"Set your minds on things above, not on earthly things."</p>
+                <p class="verse-ref">Colossians 3:2 (NIV)</p>
             </div>
 
             <!-- Word Search label + framed grid -->
@@ -487,11 +488,11 @@
                     <span style="font-size:13px;font-weight:bold;color:#e8b84b;letter-spacing:0.5px;">NEED A CLUE?</span>
                 </div>
                 <p>
-                    <span style="color:#f0ede6;">Not sure which words to look for? Tap </span>
-                    <strong class="hl">Get Hint</strong>
-                    <span style="color:#f0ede6;"> to reveal one, or tap </span>
+                    <span style="color:#f0ede6;">See which words to look for by clicking the </span>
                     <strong class="hl">🎧 Listen</strong>
-                    <span style="color:#f0ede6;"> to hear today's passage read aloud, with each word highlighted as it's spoken.</span>
+                    <span style="color:#f0ede6;"> button. Or just click </span>
+                    <strong class="hl">Get Hint</strong>
+                    <span style="color:#f0ede6;">.</span>
                 </p>
             </div>
 
