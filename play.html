@@ -2963,11 +2963,18 @@ function narrStop(reset) {
   // Kill timer first so poller cannot fire narrFinished after cancel
   if (narrEndTimer) { clearInterval(narrEndTimer); narrEndTimer=null; }
   narrUserStopped = true;
+  // Save resume position BEFORE cancelling — this is what makes "Pause" actually
+  // resumable later (previously only closing via ✕ mid-playback saved position;
+  // pressing this button did not, so a Pause-then-close lost the spot).
+  if (!reset && narrPlaying && !narrCompleted) {
+    narrLastWord = narrCurrentWord;
+    sessionStorage.setItem('narrLastWord', narrLastWord);
+  }
   narrPlaying = false; // set false before cancel
   speechSynthesis.cancel();
   document.getElementById('narr-playlabel').textContent = 'Play';
   document.getElementById('narr-playpath').setAttribute('d','M3 2.5l10 5.5-10 5.5z');
-  document.getElementById('narr-status').textContent = '';
+  document.getElementById('narr-status').textContent = reset ? '' : 'Paused';
   if (reset) narrReset();
 }
 
@@ -3043,7 +3050,7 @@ function narrToggle() {
   narrUtterance.onerror = narrFinished;
 
   narrPlaying = true;
-  document.getElementById('narr-playlabel').textContent = 'Stop';
+  document.getElementById('narr-playlabel').textContent = 'Pause';
   document.getElementById('narr-playpath').setAttribute('d','M3 2h3.5v12H3zm6.5 0H13v12H9.5z');
   document.getElementById('narr-status').textContent = resumeFrom > 0 ? 'Resuming…' : 'Playing…';
   speechSynthesis.speak(narrUtterance);
