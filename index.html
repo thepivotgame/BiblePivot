@@ -22,7 +22,7 @@
         if (new URLSearchParams(window.location.search).get('howto')) return;
         var saved = JSON.parse(localStorage.getItem('pivot_result_votd') || 'null');
         if (saved) {
-            window.location.replace('play.html');
+            window.location.replace('play-Bible.html');
         }
         } catch (e) {}
     })();
@@ -546,7 +546,7 @@
         </div>
     </div>
 
-    <a href="play.html" class="cta">Let's Play →</a>
+    <a href="play-Bible.html" class="cta">Let's Play →</a>
 
     <p class="footer">PIVOT · DAILY PUZZLE</p>
 
