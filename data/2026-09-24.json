@@ -1,0 +1,25 @@
+{
+  "theme": "GIVE CHEERFULLY",
+  "words": [
+    "HEART",
+    "BLESS",
+    "GIVER",
+    "LOVES",
+    "GIFTS",
+    "REAP",
+    "GIVE"
+  ],
+  "SIZE": 6,
+  "pivot": "REAP",
+  "target": "DEATH",
+  "noise": "MR",
+  "latHint": "The end.",
+  "pivHint": "Whoever sows sparingly will also REAP sparingly, Paul writes. In folklore, the Grim Reaper brings ______.",
+  "winText": "You found it. REAP isn't just what you gain from sowing — in folklore, the Grim Reaper is the one who brings DEATH.",
+  "lossText": "The word was DEATH. REAP was the pivot — in folklore, the Grim Reaper, who reaps souls, is the one who brings DEATH.",
+  "gridString": "RHEARTEVIGLGATEIOIPDMFVVAHRTEEBLESSR",
+  "votdRef": "2 Corinthians 9:6",
+  "votdVerse": "Remember this: Whoever sows sparingly will also reap sparingly, and whoever sows generously will also reap generously.",
+  "passRef": "2 Corinthians 9:6-9",
+  "passageText": "Remember this: Whoever sows sparingly will also reap sparingly, and whoever sows generously will also reap generously. Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver. And God is able to bless you abundantly, so that in all things at all times, having all that you need, you will abound in every good work. As it is written: “They have freely scattered their gifts to the poor; their righteousness endures forever.”"
+}

@@ -1,0 +1,25 @@
+{
+  "theme": "MORNING JOY",
+  "words": [
+    "ANGER",
+    "FAVOR",
+    "NIGHT",
+    "LASTS",
+    "SING",
+    "HOLY",
+    "NAME"
+  ],
+  "SIZE": 6,
+  "pivot": "ANGER",
+  "target": "WRATH",
+  "noise": "DEG",
+  "latHint": "Think a classic novel about the Dust Bowl.",
+  "pivHint": "ANGER isn't just what lasts only a moment, Psalm 30 says. In the classic list of seven deadly sins, this word means the same thing as ANGER.",
+  "winText": "You found it. ANGER isn't just what lasts a moment — WRATH means the same thing, from the seven deadly sins to Steinbeck's classic novel The Grapes of WRATH.",
+  "lossText": "The word was WRATH. ANGER was the pivot — WRATH is another word for it, found both in the classic list of seven deadly sins and in the title of Steinbeck's Dust Bowl novel, The Grapes of WRATH.",
+  "gridString": "LNAMEFANGERASINGHVTGAGOOSHTWLRHTDRYE",
+  "votdRef": "Psalm 30:5",
+  "votdVerse": "For his anger lasts only a moment, but his favor lasts a lifetime; weeping may stay for the night, but rejoicing comes in the morning.",
+  "passRef": "Psalm 30:4-5",
+  "passageText": "Sing the praises of the Lord, you his faithful people; praise his holy name. For his anger lasts only a moment, but his favor lasts a lifetime; weeping may stay for the night, but rejoicing comes in the morning."
+}

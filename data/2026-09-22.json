@@ -1,0 +1,25 @@
+{
+  "theme": "CALLED BY GRACE",
+  "words": [
+    "GRACE",
+    "ANGEL",
+    "CURSE",
+    "HUMAN",
+    "AGAIN",
+    "STILL",
+    "LIVE"
+  ],
+  "SIZE": 6,
+  "pivot": "HUMAN",
+  "target": "ERROR",
+  "noise": "AV",
+  "latHint": "Bad stuff in baseball.",
+  "pivHint": "Paul asks if he's trying to win the approval of HUMAN beings, or of God. A reason to miss the approval of others may be an ______.",
+  "winText": "You found it. HUMAN isn't just who Paul says he's not trying to please — pair it with ERROR, since a mistake can easily cost you someone's approval.",
+  "lossText": "The word was ERROR. HUMAN was the pivot — an ERROR, an honest mistake, is exactly the kind of thing that can cost you someone's approval.",
+  "gridString": "ALIVEAGLOHCNAIVUAGITRMRENSRAGLEEANRR",
+  "votdRef": "Galatians 1:10",
+  "votdVerse": "Am I now trying to win the approval of human beings, or of God? Or am I trying to please people? If I were still trying to please people, I would not be a servant of Christ.",
+  "passRef": "Galatians 1:6-10",
+  "passageText": "I am astonished that you are so quickly deserting the one who called you to live in the grace of Christ and are turning to a different gospel— which is really no gospel at all. Evidently some people are throwing you into confusion and are trying to pervert the gospel of Christ. But even if we or an angel from heaven should preach a gospel other than the one we preached to you, let them be under God’s curse! As we have already said, so now I say again: If anybody is preaching to you a gospel other than what you accepted, let them be under God’s curse! Am I now trying to win the approval of human beings, or of God? Or am I trying to please people? If I were still trying to please people, I would not be a servant of Christ."
+}

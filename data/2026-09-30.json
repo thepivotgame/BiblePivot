@@ -1,0 +1,25 @@
+{
+  "theme": "EVERY NEED MET",
+  "words": [
+    "AMPLY",
+    "GIFTS",
+    "OFFER",
+    "GLORY",
+    "NEEDS",
+    "FULL",
+    "MEET"
+  ],
+  "SIZE": 6,
+  "pivot": "MEET",
+  "target": "TRACK",
+  "noise": "EP",
+  "latHint": "Think railroads.",
+  "pivHint": "God promises to MEET all your needs, Paul writes. A sports competition featuring races and field events is called a ______ meet.",
+  "winText": "You found it. MEET isn't just what God does with your needs — a sports competition of races and field events is called a TRACK meet.",
+  "lossText": "The word was TRACK. MEET was the pivot — a sporting competition featuring races and field events is called a TRACK meet. TRACK is also the word for the rails a train runs on.",
+  "gridString": "FAMPLYUOFFERLMRCPOLEAEKLNEEDSGSTFIGT",
+  "votdRef": "Philippians 4:19",
+  "votdVerse": "And my God will meet all your needs according to the riches of his glory in Christ Jesus.",
+  "passRef": "Philippians 4:18-20",
+  "passageText": "I have received full payment and have more than enough. I am amply supplied, now that I have received from Epaphroditus the gifts you sent. They are a fragrant offering, an acceptable sacrifice, pleasing to God. And my God will meet all your needs according to the riches of his glory in Christ Jesus. To our God and Father be glory for ever and ever. Amen."
+}

@@ -1,0 +1,25 @@
+{
+  "theme": "LET THERE BE LIGHT",
+  "words": [
+    "EARTH",
+    "EMPTY",
+    "WATER",
+    "LIGHT",
+    "NIGHT",
+    "FIRST",
+    "GOOD"
+  ],
+  "SIZE": 6,
+  "pivot": "LIGHT",
+  "target": "HEAVY",
+  "noise": "MT",
+  "latHint": "Think sumo wrestler.",
+  "pivHint": "LIGHT isn't just what God speaks into being first. It's also the opposite of something that might be ____.",
+  "winText": "You found it. LIGHT isn't just what God creates first — it's also the opposite of HEAVY, one thing lightweight, the other not.",
+  "lossText": "The word was HEAVY. LIGHT was the pivot — HEAVY is the opposite of LIGHT in the sense of weight, not the sense of illumination in Genesis.",
+  "gridString": "EWATERAHAHMYRNIGHTTSRIFPHYTLVMGOODEE",
+  "votdRef": "Genesis 1:3",
+  "votdVerse": "And God said, “Let there be light,” and there was light.",
+  "passRef": "Genesis 1:1-5",
+  "passageText": "In the beginning God created the heavens and the earth. Now the earth was formless and empty, darkness was over the surface of the deep, and the Spirit of God was hovering over the waters. And God said, “Let there be light,” and there was light. God saw that the light was good, and he separated the light from the darkness. God called the light “day,” and the darkness he called “night.” And there was evening, and there was morning—the first day."
+}

@@ -1,0 +1,25 @@
+{
+  "theme": "NEVER LEAVE",
+  "words": [
+    "NEVER",
+    "LEAVE",
+    "SWORE",
+    "LORD",
+    "GOES",
+    "LAND",
+    "GIVE"
+  ],
+  "SIZE": 6,
+  "pivot": "LORD",
+  "target": "MAYOR",
+  "noise": "EHSTV",
+  "latHint": "Recipient of municipal votes.",
+  "pivHint": "The LORD goes before you, what do we call the person leading the city?",
+  "winText": "You found it. LORD isn't just the one who goes before you — pair it with MAYOR, and you've got LORD MAYOR, London's ceremonial civic leader.",
+  "lossText": "The word was MAYOR. LORD was the pivot — in London and other UK cities, the ceremonial head of the city council is called the LORD MAYOR.",
+  "gridString": "NLANDMEVAELOVLGIVEEROWSVRHERRSTASYDE",
+  "votdRef": "Deuteronomy 31:8",
+  "votdVerse": "The Lord himself goes before you and will be with you; he will never leave you nor forsake you. Do not be afraid; do not be discouraged.”",
+  "passRef": "Deuteronomy 31:7-8",
+  "passageText": "Then Moses summoned Joshua and said to him in the presence of all Israel, “Be strong and courageous, for you must go with this people into the land that the Lord swore to their ancestors to give them, and you must divide it among them as their inheritance. The Lord himself goes before you and will be with you; he will never leave you nor forsake you. Do not be afraid; do not be discouraged.”"
+}

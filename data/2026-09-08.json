@@ -1,0 +1,25 @@
+{
+  "theme": "CAST YOUR CARE",
+  "words": [
+    "FAVOR",
+    "PROUD",
+    "SHOWS",
+    "CARES",
+    "HAND",
+    "LIFT",
+    "CAST"
+  ],
+  "SIZE": 6,
+  "pivot": "HAND",
+  "target": "POKER",
+  "noise": "AV",
+  "latHint": "For messing with the fire.",
+  "pivHint": "You're told to humble yourself under God's mighty HAND. In card games like ______, you're dealt a hand of cards.",
+  "winText": "You found it. HAND isn't just what humbles you under God's power — in POKER, you're dealt a hand of cards to play.",
+  "lossText": "The word was POKER. HAND was the pivot — in POKER, players are dealt a hand of cards. A POKER is also the metal tool used to stir a fireplace.",
+  "gridString": "CLIFTPAAHARRRESAPOEVOTNUSHOWSDFAVORK",
+  "votdRef": "1 Peter 5:6",
+  "votdVerse": "Humble yourselves, therefore, under God’s mighty hand, that he may lift you up in due time.",
+  "passRef": "1 Peter 5:5-7",
+  "passageText": "In the same way, you who are younger, submit yourselves to your elders. All of you, clothe yourselves with humility toward one another, because, “God opposes the proud but shows favor to the humble.” Humble yourselves, therefore, under God’s mighty hand, that he may lift you up in due time. Cast all your anxiety on him because he cares for you."
+}

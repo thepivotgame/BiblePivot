@@ -1,0 +1,25 @@
+{
+  "theme": "LIFE IN THE SPIRIT",
+  "words": [
+    "REALM",
+    "FLESH",
+    "LIVES",
+    "DEATH",
+    "RAISE",
+    "BODY",
+    "LIFE"
+  ],
+  "SIZE": 6,
+  "pivot": "DEATH",
+  "target": "TAXES",
+  "noise": "DLM",
+  "latHint": "Paid with every purchase (in most places).",
+  "pivHint": "The Spirit who raised Christ from death will also give life to you, Paul writes. An old saying claims only two things in life are certain: DEATH and ______.",
+  "winText": "You found it. DEATH isn't just what Christ was raised from — the old saying goes that only DEATH and TAXES are certain in life.",
+  "lossText": "The word was TAXES. DEATH was the pivot — Paul writes that the Spirit raised Christ from death; separately, an old saying holds that only DEATH and TAXES are certain in life. TAXES are also charged on nearly every purchase you make, as sales tax.",
+  "gridString": "RFLESHESIRTLABVAMILOEIDFMDSSAEXYEETL",
+  "votdRef": "Romans 8:11",
+  "votdVerse": "And if the Spirit of him who raised Jesus from the dead is living in you, he who raised Christ from the dead will also give life to your mortal bodies because of his Spirit who lives in you.",
+  "passRef": "Romans 8:9-11",
+  "passageText": "You, however, are not in the realm of the flesh but are in the realm of the Spirit, if indeed the Spirit of God lives in you. And if anyone does not have the Spirit of Christ, they do not belong to Christ. But if Christ is in you, then even though your body is subject to death because of sin, the Spirit gives life because of righteousness. And if the Spirit of him who raised Jesus from the dead is living in you, he who raised Christ from the dead will also give life to your mortal bodies because of his Spirit who lives in you."
+}

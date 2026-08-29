@@ -1,0 +1,25 @@
+{
+  "theme": "FULL OF PRAISE",
+  "words": [
+    "THANK",
+    "HEART",
+    "DEEDS",
+    "GIVE",
+    "TELL",
+    "GLAD",
+    "SING"
+  ],
+  "SIZE": 6,
+  "pivot": "DEEDS",
+  "target": "TITLE",
+  "noise": "AKMNRSU",
+  "latHint": "What you'd get after buying a house, alongside the deed.",
+  "pivHint": "The Psalmist writes of God's wonderful DEEDS. In real estate, the document proving you own a house is called its ______, alongside its deed.",
+  "winText": "You found it. DEEDS isn't just God's wonderful acts — in real estate, a property's DEED goes hand in hand with its TITLE, both proving ownership.",
+  "lossText": "The word was TITLE. DEEDS was the pivot — in real estate, a property's DEED and its TITLE are both documents proving who owns it.",
+  "gridString": "TRAEHDHEGIVEANLNMENLALIDKTDKTSISARUE",
+  "votdRef": "Psalm 9:1",
+  "votdVerse": "I will give thanks to you, Lord, with all my heart; I will tell of all your wonderful deeds.",
+  "passRef": "Psalm 9:1-2",
+  "passageText": "I will give thanks to you, Lord, with all my heart; I will tell of all your wonderful deeds. I will be glad and rejoice in you; I will sing the praises of your name, O Most High."
+}

@@ -1,0 +1,25 @@
+{
+  "theme": "GUARD YOUR HEART",
+  "words": [
+    "WORDS",
+    "SIGHT",
+    "HEART",
+    "GUARD",
+    "FLOWS",
+    "KEEP",
+    "LIFE"
+  ],
+  "SIZE": 6,
+  "pivot": "GUARD",
+  "target": "POINT",
+  "noise": "GHR",
+  "latHint": "What speakers try to make.",
+  "pivHint": "Proverbs tells us to GUARD our hearts, above all else. In basketball, the player who brings the ball up court is called the ______ guard.",
+  "winText": "You found it. GUARD isn't just what you do to your heart — in basketball, the player who brings up the ball is called the POINT guard.",
+  "lossText": "The word was POINT. GUARD was the pivot — in basketball, the player responsible for bringing up the ball is called the POINT guard. POINT is also what a speaker is trying to make when arguing an idea.",
+  "gridString": "WGOPHKORUHEEREIAAEDFNGRPSIGHTDFLOWST",
+  "votdRef": "Proverbs 4:23",
+  "votdVerse": "Above all else, guard your heart, for everything you do flows from it.",
+  "passRef": "Proverbs 4:20-23",
+  "passageText": "My son, pay attention to what I say; turn your ear to my words. Do not let them out of your sight, keep them within your heart; for they are life to those who find them and health to one’s whole body. Above all else, guard your heart, for everything you do flows from it."
+}

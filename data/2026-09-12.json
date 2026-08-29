@@ -1,0 +1,25 @@
+{
+  "theme": "TRUE REST",
+  "words": [
+    "WEARY",
+    "LEARN",
+    "HEART",
+    "SOULS",
+    "LIGHT",
+    "REST",
+    "YOKE"
+  ],
+  "SIZE": 6,
+  "pivot": "REST",
+  "target": "NOTES",
+  "noise": "HR",
+  "latHint": "What students take.",
+  "pivHint": "REST isn't just what Jesus promises the weary. In sheet music, a symbol showing a pause is called a REST — and the symbols showing which pitch to play are called ______.",
+  "winText": "You found it. REST isn't just what Jesus promises the weary — in music notation, a REST sits alongside NOTES, the symbols for which pitch to play.",
+  "lossText": "The word was NOTES. REST was the pivot — in sheet music, a REST marks a pause, while NOTES mark the pitches to play; both are symbols in musical notation.",
+  "gridString": "RSOULSEKOYILSHNEGETRAEHATORSTRWEARYN",
+  "votdRef": "Matthew 11:28",
+  "votdVerse": "“Come to me, all you who are weary and burdened, and I will give you rest.",
+  "passRef": "Matthew 11:28-30",
+  "passageText": "“Come to me, all you who are weary and burdened, and I will give you rest. Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls. For my yoke is easy and my burden is light.”"
+}

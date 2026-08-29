@@ -1,0 +1,25 @@
+{
+  "theme": "LIFE AND PEACE",
+  "words": [
+    "FLESH",
+    "REALM",
+    "GIVES",
+    "ORDER",
+    "FREE",
+    "LIFE",
+    "MIND"
+  ],
+  "SIZE": 6,
+  "pivot": "MIND",
+  "target": "BRAIN",
+  "noise": "EHSTV",
+  "latHint": "The smart one behind a heist.",
+  "pivHint": "The MIND governed by the Spirit is life and peace, Paul writes. Another word for the mind, the organ that does your thinking, is your ______.",
+  "winText": "You found it. MIND isn't just what the Spirit governs — your BRAIN is the physical organ behind your mind.",
+  "lossText": "The word was BRAIN. MIND was the pivot — your BRAIN is the physical organ your mind uses to think. BRAIN is also slang for the mastermind behind a scheme, 'the brains of the operation.'",
+  "gridString": "FREALMLORDERESLNBNSEVIGTHRRMFHIEAFVE",
+  "votdRef": "Romans 8:6",
+  "votdVerse": "The mind governed by the flesh is death, but the mind governed by the Spirit is life and peace.",
+  "passRef": "Romans 8:1-8",
+  "passageText": "Therefore, there is now no condemnation for those who are in Christ Jesus, because through Christ Jesus the law of the Spirit who gives life has set you free from the law of sin and death. For what the law was powerless to do because it was weakened by the flesh, God did by sending his own Son in the likeness of sinful flesh to be a sin offering. And so he condemned sin in the flesh, in order that the righteous requirement of the law might be fully met in us, who do not live according to the flesh but according to the Spirit. Those who live according to the flesh have their minds set on what the flesh desires; but those who live in accordance with the Spirit have their minds set on what the Spirit desires. The mind governed by the flesh is death, but the mind governed by the Spirit is life and peace. The mind governed by the flesh is hostile to God; it does not submit to God’s law, nor can it do so. Those who are in the realm of the flesh cannot please God."
+}

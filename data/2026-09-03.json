@@ -1,0 +1,25 @@
+{
+  "theme": "MY ROCK",
+  "words": [
+    "SAVED",
+    "CORDS",
+    "DEATH",
+    "GRAVE",
+    "LOVE",
+    "LORD",
+    "ROCK"
+  ],
+  "SIZE": 6,
+  "pivot": "ROCK",
+  "target": "PAPER",
+  "noise": "DLM",
+  "latHint": "Think folding airplanes.",
+  "pivHint": "ROCK isn't just David's refuge. In the childhood hand game, it's one of three moves — and this one beats it by covering it.",
+  "winText": "You found it. ROCK isn't just David's refuge — it's also one of three moves in ROCK-PAPER-Scissors, and PAPER is the move that beats it.",
+  "lossText": "The word was PAPER. ROCK was the pivot — in the hand game ROCK-PAPER-Scissors, PAPER beats ROCK by covering it.",
+  "gridString": "SDROCGAPALMRVROCKAERRPLVDEATHELOVEDE",
+  "votdRef": "Psalm 18:2",
+  "votdVerse": "The Lord is my rock, my fortress and my deliverer; my God is my rock, in whom I take refuge, my shield and the horn of my salvation, my stronghold.",
+  "passRef": "Psalm 18:1-5",
+  "passageText": "I love you, Lord, my strength. The Lord is my rock, my fortress and my deliverer; my God is my rock, in whom I take refuge, my shield and the horn of my salvation, my stronghold. I called to the Lord, who is worthy of praise, and I have been saved from my enemies. The cords of death entangled me; the torrents of destruction overwhelmed me. The cords of the grave coiled around me; the snares of death confronted me."
+}

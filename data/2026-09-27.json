@@ -1,0 +1,25 @@
+{
+  "theme": "EARS TO HEAR",
+  "words": [
+    "BIRDS",
+    "ROCKY",
+    "TIMES",
+    "SEED",
+    "PATH",
+    "EARS",
+    "HEAR"
+  ],
+  "SIZE": 6,
+  "pivot": "EARS",
+  "target": "DROPS",
+  "noise": "CEW",
+  "latHint": "It slips from your hands.",
+  "pivHint": "Jesus says, 'Whoever has EARS to hear, let them hear.' When your EARS ache a doctor might prescribe some ear ______.",
+  "winText": "You found it. EARS isn't just what Jesus says to use for hearing — when they ache, a doctor might prescribe ear DROPS.",
+  "lossText": "The word was DROPS. EARS was the pivot — a doctor treating sore ears might prescribe ear DROPS. DROPS is also what happens when something slips from your hands and falls.",
+  "gridString": "BPATHEIHEARAROCKYRDEESSSSEMITPCODRWE",
+  "votdRef": "Mark 4:9",
+  "votdVerse": "Then Jesus said, “Whoever has ears to hear, let them hear.”",
+  "passRef": "Mark 4:3-9",
+  "passageText": "“Listen! A farmer went out to sow his seed. As he was scattering the seed, some fell along the path, and the birds came and ate it up. Some fell on rocky places, where it did not have much soil. It sprang up quickly, because the soil was shallow. But when the sun came up, the plants were scorched, and they withered because they had no root. Other seed fell among thorns, which grew up and choked the plants, so that they did not bear grain. Still other seed fell on good soil. It came up, grew and produced a crop, some multiplying thirty, some sixty, some a hundred times.” Then Jesus said, “Whoever has ears to hear, let them hear.”"
+}

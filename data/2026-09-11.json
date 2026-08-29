@@ -1,0 +1,25 @@
+{
+  "theme": "CARRY BURDENS",
+  "words": [
+    "WATCH",
+    "CARRY",
+    "ALONE",
+    "PRIDE",
+    "LIVE",
+    "EACH",
+    "LOAD"
+  ],
+  "SIZE": 6,
+  "pivot": "CARRY",
+  "target": "CROSS",
+  "noise": "DEH",
+  "latHint": "Think Calvary and Good Friday.",
+  "pivHint": "CARRY isn't just what Paul says to do with each other's burdens. Jesus also tells his followers to CARRY their ______ daily.",
+  "winText": "You found it. CARRY isn't just bearing each other's burdens — pair it with CROSS, and you've got Jesus' call to carry your CROSS daily.",
+  "lossText": "The word was CROSS. CARRY was the pivot — in Luke's Gospel, Jesus says whoever wants to follow him must CARRY their CROSS daily.",
+  "gridString": "WPRIDEALONEVTESSCICARRYLHCLOADEHDHRO",
+  "votdRef": "Galatians 6:2",
+  "votdVerse": "Carry each other’s burdens, and in this way you will fulfill the law of Christ.",
+  "passRef": "Galatians 6:1-5",
+  "passageText": "Brothers and sisters, if someone is caught in a sin, you who live by the Spirit should restore that person gently. But watch yourselves, or you also may be tempted. Carry each other’s burdens, and in this way you will fulfill the law of Christ. If anyone thinks they are something when they are not, they deceive themselves. Each one should test their own actions. Then they can take pride in themselves alone, without comparing themselves to someone else, for each one should carry their own load."
+}

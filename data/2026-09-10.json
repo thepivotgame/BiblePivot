@@ -1,0 +1,25 @@
+{
+  "theme": "SOW & REAP",
+  "words": [
+    "FRUIT",
+    "PLANT",
+    "EATEN",
+    "SEEK",
+    "REAP",
+    "EVIL",
+    "PLOW"
+  ],
+  "SIZE": 6,
+  "pivot": "REAP",
+  "target": "SOWER",
+  "noise": "FHT",
+  "latHint": "Think seeds falling on rocky ground and a path.",
+  "pivHint": "REAP isn't just what you gain when you sow righteousness, Hosea says. In one of Jesus' most famous parables, the person who scatters seed is called the ______.",
+  "winText": "You found it. REAP isn't just what you gain from sowing righteousness — pair it with SOWER, and you've got Jesus' famous Parable of the SOWER.",
+  "lossText": "The word was SOWER. REAP was the pivot — in Jesus' famous parable, the person who scatters seed on different types of soil is called the SOWER.",
+  "gridString": "RFRUITESEEKEAPTRWAPLANTTHOLIVEFWOSEN",
+  "votdRef": "Hosea 10:12",
+  "votdVerse": "Sow righteousness for yourselves, reap the fruit of unfailing love, and break up your unplowed ground; for it is time to seek the Lord, until he comes and showers his righteousness on you.",
+  "passRef": "Hosea 10:12-13",
+  "passageText": "Sow righteousness for yourselves, reap the fruit of unfailing love, and break up your unplowed ground; for it is time to seek the Lord, until he comes and showers his righteousness on you. But you have planted wickedness, you have reaped evil, you have eaten the fruit of deception. Because you have depended on your own strength and on your many warriors,"
+}

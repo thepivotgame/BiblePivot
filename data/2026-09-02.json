@@ -1,0 +1,25 @@
+{
+  "theme": "SEEK FIRST",
+  "words": [
+    "WORRY",
+    "FIRST",
+    "GIVEN",
+    "SEEK",
+    "NEED",
+    "EACH",
+    "KNOW"
+  ],
+  "SIZE": 6,
+  "pivot": "WORRY",
+  "target": "PANDA",
+  "noise": "RW",
+  "latHint": "Bamboo.",
+  "pivHint": "Jesus says not to WORRY about tomorrow. A black-and-white bear from China, often shown looking anxious in cartoons, is called a ______.",
+  "winText": "You found it. WORRY isn't just what Jesus tells you not to do — it's also the nickname often given to the fretful-looking PANDA bear.",
+  "lossText": "The word was PANDA. WORRY was the pivot — pandas are often drawn or described as looking worried, thanks to the dark patches around their eyes.",
+  "gridString": "SFIRSTENEEDWEACHAOKNOWARGIVENRRPDWNY",
+  "votdRef": "Matthew 6:34",
+  "votdVerse": "Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own.",
+  "passRef": "Matthew 6:31-34",
+  "passageText": "So do not worry, saying, ‘What shall we eat?’ or ‘What shall we drink?’ or ‘What shall we wear?’ For the pagans run after all these things, and your heavenly Father knows that you need them. But seek first his kingdom and his righteousness, and all these things will be given to you as well. Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own."
+}

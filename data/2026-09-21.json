@@ -1,0 +1,25 @@
+{
+  "theme": "KEEPS COVENANT",
+  "words": [
+    "SWORE",
+    "MIGHT",
+    "FAITH",
+    "CHOSE",
+    "POWER",
+    "LOVE",
+    "KEEP"
+  ],
+  "SIZE": 6,
+  "pivot": "LOVE",
+  "target": "COURT",
+  "noise": "EP",
+  "latHint": "One stop before jail.",
+  "pivHint": "God's covenant is one of LOVE. That word also indicates a score of a game on a ______.",
+  "winText": "You found it. LOVE isn't just God's covenant — in tennis, LOVE means a score of zero, played on a COURT.",
+  "lossText": "The word was COURT. LOVE was the pivot — in tennis, LOVE means a score of zero, and matches are played on a COURT. (And yes, it's also where you'd go before jail.)",
+  "gridString": "LFAITHOKEEPMVORCRIESOHCGPOWERHUPSTET",
+  "votdRef": "Deuteronomy 7:9",
+  "votdVerse": "Know therefore that the Lord your God is God; he is the faithful God, keeping his covenant of love to a thousand generations of those who love him and keep his commandments.",
+  "passRef": "Deuteronomy 7:6-9",
+  "passageText": "For you are a people holy to the Lord your God. The Lord your God has chosen you out of all the peoples on the face of the earth to be his people, his treasured possession. The Lord did not set his affection on you and choose you because you were more numerous than other peoples, for you were the fewest of all peoples. But it was because the Lord loved you and kept the oath he swore to your ancestors that he brought you out with a mighty hand and redeemed you from the land of slavery, from the power of Pharaoh king of Egypt. Know therefore that the Lord your God is God; he is the faithful God, keeping his covenant of love to a thousand generations of those who love him and keep his commandments."
+}

@@ -1,0 +1,25 @@
+{
+  "theme": "SPIRIT'S FRUIT",
+  "words": [
+    "FRUIT",
+    "PEACE",
+    "FAITH",
+    "FLESH",
+    "LOVE",
+    "GOOD",
+    "STEP"
+  ],
+  "SIZE": 6,
+  "pivot": "FRUIT",
+  "target": "LEVER",
+  "noise": "AFH",
+  "latHint": "Think pulling it.",
+  "pivHint": "FRUIT isn't just what the Spirit produces. In Britain, a slot machine covered in cherries and lemons is nicknamed a FRUIT machine — and you pull its ______ to play.",
+  "winText": "You found it. FRUIT isn't just what the Spirit produces — it's also part of 'fruit machine,' British slang for a slot machine, and every one has a LEVER to pull.",
+  "lossText": "The word was LEVER. FRUIT was the pivot — in Britain, a slot machine covered in cherries and lemons is nicknamed a 'fruit machine,' and players pull its LEVER to play.",
+  "gridString": "FPEACERALEFVUAILVOIPETSLTSRHHFHGOODE",
+  "votdRef": "Galatians 5:22-23",
+  "votdVerse": "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. Against such things there is no law.",
+  "passRef": "Galatians 5:22-25",
+  "passageText": "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. Against such things there is no law. Those who belong to Christ Jesus have crucified the flesh with its passions and desires. Since we live by the Spirit, let us keep in step with the Spirit."
+}

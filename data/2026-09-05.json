@@ -1,0 +1,25 @@
+{
+  "theme": "TRUE WISDOM",
+  "words": [
+    "YOUNG",
+    "FOOLS",
+    "WORDS",
+    "LEARN",
+    "GUIDE",
+    "RIGHT",
+    "FEAR"
+  ],
+  "SIZE": 6,
+  "pivot": "FEAR",
+  "target": "DREAD",
+  "noise": "MT",
+  "latHint": "Slang for twisted hair.",
+  "pivHint": "The FEAR of the Lord is the beginning of knowledge. Another word for FEAR, especially of something looming, is ______.",
+  "winText": "You found it. FEAR isn't just the beginning of knowledge — DREAD means much the same thing, a looming sense of fear.",
+  "lossText": "The word was DREAD. FEAR was the pivot — DREAD is another word for fear, especially a looming, anticipatory kind. DREAD is also short for dreadlocks, the hairstyle worn in long, twisted locks.",
+  "gridString": "YFOOLSOREDEDUIDAARNGIMROGHURNWETGDAT",
+  "votdRef": "Proverbs 1:7",
+  "votdVerse": "The fear of the Lord is the beginning of knowledge, but fools despise wisdom and instruction.",
+  "passRef": "Proverbs 1:1-7",
+  "passageText": "The proverbs of Solomon son of David, king of Israel: for gaining wisdom and instruction; for understanding words of insight; for receiving instruction in prudent behavior, doing what is right and just and fair; for giving prudence to those who are simple, knowledge and discretion to the young— let the wise listen and add to their learning, and let the discerning get guidance— for understanding proverbs and parables, the sayings and riddles of the wise. The fear of the Lord is the beginning of knowledge, but fools despise wisdom and instruction."
+}

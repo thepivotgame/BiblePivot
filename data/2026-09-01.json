@@ -1,0 +1,25 @@
+{
+  "theme": "GODLY POWER",
+  "words": [
+    "GIVEN",
+    "GODLY",
+    "POWER",
+    "GREAT",
+    "WORLD",
+    "NEED",
+    "LIFE"
+  ],
+  "SIZE": 6,
+  "pivot": "POWER",
+  "target": "WATTS",
+  "noise": "EHIM",
+  "latHint": "A Los Angeles neighborhood.",
+  "pivHint": "God's divine POWER has given us everything we need. In physics, POWER is measured in units called ______.",
+  "winText": "You found it. POWER isn't just what God's divine nature gives us — in physics, POWER is measured in WATTS.",
+  "lossText": "The word was WATTS. POWER was the pivot — in physics, POWER is measured in units called WATTS. WATTS is also a neighborhood in Los Angeles.",
+  "gridString": "GPETWWIOAFTOVWDAIREEELTLNREIYDGENHSM",
+  "votdRef": "2 Peter 1:3",
+  "votdVerse": "His divine power has given us everything we need for a godly life through our knowledge of him who called us by his own glory and goodness.",
+  "passRef": "2 Peter 1:3-4",
+  "passageText": "His divine power has given us everything we need for a godly life through our knowledge of him who called us by his own glory and goodness. Through these he has given us his very great and precious promises, so that through them you may participate in the divine nature, having escaped the corruption in the world caused by evil desires."
+}

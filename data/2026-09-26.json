@@ -1,0 +1,25 @@
+{
+  "theme": "FULL ARMOR",
+  "words": [
+    "ARMOR",
+    "FLESH",
+    "BLOOD",
+    "WORLD",
+    "STAND",
+    "FULL",
+    "EVIL"
+  ],
+  "SIZE": 6,
+  "pivot": "ARMOR",
+  "target": "TANKS",
+  "noise": "DEH",
+  "latHint": "Something flops badly.",
+  "pivHint": "Paul tells us to put on the full ARMOR of God to take our stand. What are armored vehicles called?",
+  "winText": "You found it. ARMOR isn't just what Paul tells us to put on — armored vehicles are called TANKS.",
+  "lossText": "The word was TANKS. ARMOR was the pivot — armored vehicles are called TANKS. It's also a verb: when something fails badly, like a bad movie at the box office, we say it TANKS.",
+  "gridString": "AFLESHRBLOODMTUNLNOEFRIARAODVTSWHKES",
+  "votdRef": "Ephesians 6:11",
+  "votdVerse": "Put on the full armor of God, so that you can take your stand against the devil’s schemes.",
+  "passRef": "Ephesians 6:11-13",
+  "passageText": "Put on the full armor of God, so that you can take your stand against the devil’s schemes. For our struggle is not against flesh and blood, but against the rulers, against the authorities, against the powers of this dark world and against the spiritual forces of evil in the heavenly realms. Therefore put on the full armor of God, so that when the day of evil comes, you may be able to stand your ground, and after you have done everything, to stand."
+}

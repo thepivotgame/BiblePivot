@@ -1,0 +1,25 @@
+{
+  "theme": "SET FREE",
+  "words": [
+    "TEACH",
+    "TRUTH",
+    "SLAVE",
+    "NEVER",
+    "PLACE",
+    "FREE",
+    "KNOW"
+  ],
+  "SIZE": 6,
+  "pivot": "TRUTH",
+  "target": "FILES",
+  "noise": "ADKNT",
+  "latHint": "Think paperwork in a cabinet.",
+  "pivHint": "TRUTH isn't just what sets you free, Jesus says. A classic TV show about UFO investigators had the tagline 'the TRUTH is out there' — it was called The X-______.",
+  "winText": "You found it. TRUTH isn't just what sets you free — 'the TRUTH is out there' was the tagline of The X-FILES, the classic UFO show.",
+  "lossText": "The word was FILES. TRUTH was the pivot — 'the TRUTH is out there' was the famous tagline of The X-FILES TV show.",
+  "gridString": "TDEAEKEREVENAVUCROCNATFWHLSLHTPLFKSI",
+  "votdRef": "John 8:32",
+  "votdVerse": "Then you will know the truth, and the truth will set you free.”",
+  "passRef": "John 8:31-36",
+  "passageText": "To the Jews who had believed him, Jesus said, “If you hold to my teaching, you are really my disciples. Then you will know the truth, and the truth will set you free.” They answered him, “We are Abraham’s descendants and have never been slaves of anyone. How can you say that we shall be set free?” Jesus replied, “Very truly I tell you, everyone who sins is a slave to sin. Now a slave has no permanent place in the family, but a son belongs to it forever. So if the Son sets you free, you will be free indeed."
+}

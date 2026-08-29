@@ -1,0 +1,25 @@
+{
+  "theme": "HIS PRESENCE",
+  "words": [
+    "TEACH",
+    "FAVOR",
+    "SPEAK",
+    "YOUNG",
+    "LEAVE",
+    "KNOW",
+    "REST"
+  ],
+  "SIZE": 6,
+  "pivot": "REST",
+  "target": "STILL",
+  "noise": "EP",
+  "latHint": "Another word for photograph.",
+  "pivHint": "The Lord promises Moses REST, along with his Presence. In physics, an object at REST is often described as being perfectly ______.",
+  "winText": "You found it. REST isn't just what God promises Moses — in physics, an object at rest is described as being perfectly STILL.",
+  "lossText": "The word was STILL. REST was the pivot — in physics, an object at REST is simply one that's perfectly STILL, not moving. STILL is also another word for a photograph, a single STILL frame.",
+  "gridString": "YKNOWROTLEOEULEVPSNLAATTGFVICSSPEAKH",
+  "votdRef": "Exodus 33:14",
+  "votdVerse": "The Lord replied, “My Presence will go with you, and I will give you rest.”",
+  "passRef": "Exodus 33:11-14",
+  "passageText": "The Lord would speak to Moses face to face, as one speaks to a friend. Then Moses would return to the camp, but his young aide Joshua son of Nun did not leave the tent. Moses said to the Lord, “You have been telling me, ‘Lead these people,’ but you have not let me know whom you will send with me. You have said, ‘I know you by name and you have found favor with me.’ If you are pleased with me, teach me your ways so I may know you and continue to find favor with you. Remember that this nation is your people.” The Lord replied, “My Presence will go with you, and I will give you rest.”"
+}
