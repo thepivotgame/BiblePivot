@@ -1613,7 +1613,7 @@
         }
         if (s.isLastDay) {
             html += '<div class="stats-nudge stats-final">Completed ' + s.monthName + "'s VOTD Pivot — " +
-                s.played + '/' + s.elapsedDays + ' days, average score ' + s.avgScore.toFixed(1) + '</div>';
+                s.played + '/' + s.elapsedDays + ' days, average score ' + s.avgPointsScore.toFixed(1) + '</div>';
         }
         panel.innerHTML = html;
         panel.style.display = 'block';
@@ -1622,7 +1622,7 @@
         const s = statsSummary(dateStr);
         if (!s.isLastDay) return '';
         return '\nCompleted ' + s.monthName + "'s VOTD Pivot — " + s.played + '/' + s.elapsedDays +
-            ' days, average score ' + s.avgScore.toFixed(1);
+            ' days, average score ' + s.avgPointsScore.toFixed(1);
     }
 
     // ── VALID WORDS (pre-computed for this puzzle) ─────────────────────────────
