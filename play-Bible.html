@@ -3308,13 +3308,36 @@
             sumDevo.addEventListener('click', function(e) {
                 e.preventDefault();
                 const today = todayISO(); // 'YYYY-MM-DD', so lexical compare works
-                if (today < '2026-08-01') {
-                    alert('This feature is not yet active, pending release of new set of devotionals starting August 1. Please check back then.');
+                // Aug 31 is a single leftover day from the old August plan (fixed day 31).
+                // September 2026 is split across 8 YouVersion reading plans, each
+                // covering a fixed date range; dayNum = position within that plan's
+                // own range (resets to 1 at the start of each range) unless a fixed
+                // "day" is given explicitly (as for the Aug 31 entry).
+                const READING_PLANS = [
+                    { start: '2026-08-31', end: '2026-08-31', plan: 74047, day: 31 },
+                    { start: '2026-09-01', end: '2026-09-05', plan: 76187 },
+                    { start: '2026-09-06', end: '2026-09-09', plan: 80241 },
+                    { start: '2026-09-10', end: '2026-09-13', plan: 80310 },
+                    { start: '2026-09-14', end: '2026-09-16', plan: 80315 },
+                    { start: '2026-09-17', end: '2026-09-20', plan: 80317 },
+                    { start: '2026-09-21', end: '2026-09-24', plan: 80318 },
+                    { start: '2026-09-25', end: '2026-09-27', plan: 80322 },
+                    { start: '2026-09-28', end: '2026-09-30', plan: 80326 }
+                ];
+                const range = READING_PLANS.find(function(r) { return today >= r.start && today <= r.end; });
+                if (!range) {
+                    alert('This feature is not yet active for today\'s date. Please check back soon.');
                     return;
                 }
-                // August 1–31: reading-plan day number = calendar day of month.
-                const dayNum = parseInt(today.split('-')[2], 10);
-                const url = 'https://www.bible.com/reading-plans/74047-when-life-changes-god-doesnt-31-days-of/day/' + dayNum;
+                let dayNum;
+                if (range.day !== undefined) {
+                    dayNum = range.day;
+                } else {
+                    const startDay = parseInt(range.start.split('-')[2], 10);
+                    const todayDay = parseInt(today.split('-')[2], 10);
+                    dayNum = todayDay - startDay + 1;
+                }
+                const url = 'https://www.bible.com/reading-plans/' + range.plan + '/day/' + dayNum;
                 window.open(url, '_blank', 'noopener');
             });
         }
