@@ -10,16 +10,16 @@
     "REST"
   ],
   "SIZE": 6,
-  "pivot": "TOWNS",
-  "target": "GHOST",
-  "noise": "AFKL",
-  "latHint": "Think Halloween.",
-  "pivHint": "No foreigner residing in your TOWNS may work on the Sabbath, God commands. Abandoned old-west settlements are called ______ towns.",
-  "winText": "You found it. TOWNS isn't just a word in today's verse — an abandoned old-west settlement is called a GHOST town.",
-  "lossText": "The word was GHOST. TOWNS was the pivot — an abandoned old-west settlement is called a GHOST town.",
-  "gridString": "TEARTHOLORDOWORKTLNKGSTYSSELBAORLHSF",
+  "pivot": "REST",
+  "target": "NOTES",
+  "noise": "ADHL",
+  "latHint": "Think a reminder you jot down and stick on the fridge.",
+  "pivHint": "The Sabbath is a day of REST. In a musical score, a REST marks a silent pause, while the symbols telling you to play are ______.",
+  "winText": "You found it. REST isn't just the Sabbath's purpose. In music, a REST is the silent partner of the NOTES.",
+  "lossText": "The word was NOTES. REST was the pivot. In written music, a REST tells the player to be silent for a beat, while NOTES tell the player what to play.",
+  "gridString": "TEARTHOLORDOWORKTLNDNSSYSSELBATRLOEH",
   "votdRef": "Exodus 20:8",
-  "votdVerse": "“Remember the Sabbath day by keeping it holy.",
+  "votdVerse": "Remember the Sabbath day by keeping it holy.",
   "passRef": "Exodus 20:8-11",
-  "passageText": "“Remember the Sabbath day by keeping it holy. Six days you shall labor and do all your work, but the seventh day is a sabbath to the Lord your God. On it you shall not do any work, neither you, nor your son or daughter, nor your male or female servant, nor your animals, nor any foreigner residing in your towns. For in six days the Lord made the heavens and the earth, the sea, and all that is in them, but he rested on the seventh day. Therefore the Lord blessed the Sabbath day and made it holy."
+  "passageText": "Remember the Sabbath day by keeping it holy. Six days you shall labor and do all your work, but the seventh day is a sabbath to the Lord your God. On it you shall not do any work, neither you, nor your son or daughter, nor your male or female servant, nor your animals, nor any foreigner residing in your towns. For in six days the Lord made the heavens and the earth, the sea, and all that is in them, but he rested on the seventh day. Therefore the Lord blessed the Sabbath day and made it holy."
 }

@@ -10,16 +10,16 @@
     "CALL"
   ],
   "SIZE": 6,
-  "pivot": "RIGHT",
-  "target": "ANGLE",
-  "noise": "MR",
-  "latHint": "Think geometry.",
-  "pivHint": "I will uphold you with my righteous RIGHT hand, God says. A corner of exactly ninety degrees is called a right ______.",
-  "winText": "You found it. RIGHT isn't just a word in today's verse — a ninety-degree corner is a right ANGLE.",
-  "lossText": "The word was ANGLE. RIGHT was the pivot — a ninety-degree corner is a right ANGLE.",
-  "gridString": "JEARTHAFHICACEEGANOALHLDBRPTLGMAENRL",
+  "pivot": "HAND",
+  "target": "RANCH",
+  "noise": "EG",
+  "latHint": "Think where cowboys live.",
+  "pivHint": "God promises to uphold you with his righteous right HAND. A hired worker on a large livestock farm is called a ______ HAND.",
+  "winText": "You found it. HAND isn't just the hand that upholds us. A worker on a large livestock farm is called a RANCH HAND.",
+  "lossText": "The word was RANCH. HAND was the pivot. A RANCH is a large farm for raising cattle, and the workers there are called RANCH HANDs.",
+  "gridString": "JEARTHAFHICACEEGANOALHLDBRPTLNERHAGC",
   "votdRef": "Isaiah 41:10",
   "votdVerse": "So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand.",
   "passRef": "Isaiah 41:8-10",
-  "passageText": "“But you, Israel, my servant, Jacob, whom I have chosen, you descendants of Abraham my friend, I took you from the ends of the earth, from its farthest corners I called you. I said, ‘You are my servant’; I have chosen you and have not rejected you. So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand."
+  "passageText": "But you, Israel, my servant, Jacob, whom I have chosen, you descendants of Abraham my friend, I took you from the ends of the earth, from its farthest corners I called you. I said, ‘You are my servant’; I have chosen you and have not rejected you. So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand."
 }

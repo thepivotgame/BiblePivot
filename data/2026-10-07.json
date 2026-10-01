@@ -10,16 +10,16 @@
     "HARM"
   ],
   "SIZE": 6,
-  "pivot": "PLANS",
-  "target": "FLOOR",
-  "noise": "EHSTV",
-  "latHint": "Think architects.",
-  "pivHint": "God says he knows the PLANS he has for you, Jeremiah writes. A drawing of a building's layout is called a ______ plan.",
-  "winText": "You found it. PLANS isn't just a word in today's verse — a drawing of a building's layout is a FLOOR plan.",
-  "lossText": "The word was FLOOR. PLANS was the pivot — a drawing of a building's layout is a FLOOR plan.",
-  "gridString": "PKOEYELLNEPHAVAOHANRHCWRSGIVEMRSFTLO",
+  "pivot": "HOPE",
+  "target": "FAITH",
+  "noise": "EKLSZ",
+  "latHint": "Think of a leap taken in the dark.",
+  "pivHint": "God promises a future and HOPE. In Paul's famous list, three things remain: ______, HOPE and love.",
+  "winText": "You found it. HOPE isn't just the future God promises through Jeremiah. It's one of Paul's three lasting virtues, with FAITH and love.",
+  "lossText": "The word was FAITH. HOPE was the pivot. In 1 Corinthians 13:13, Paul says three things remain: FAITH, HOPE and love.",
+  "gridString": "PKIZYELLNEPHALAOSANRHCWRSGIVEMHKFEAT",
   "votdRef": "Jeremiah 29:11",
   "votdVerse": "For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future.",
   "passRef": "Jeremiah 29:10-11",
-  "passageText": "This is what the Lord says: “When seventy years are completed for Babylon, I will come to you and fulfill my good promise to bring you back to this place. For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future."
+  "passageText": "This is what the Lord says: When seventy years are completed for Babylon, I will come to you and fulfill my good promise to bring you back to this place. For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."
 }
