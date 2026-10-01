@@ -1,0 +1,25 @@
+{
+  "theme": "PSALM 118:24",
+  "words": [
+    "STONE",
+    "TODAY",
+    "BUILD",
+    "LORD",
+    "EYES",
+    "DONE",
+    "GLAD"
+  ],
+  "SIZE": 6,
+  "pivot": "STONE",
+  "target": "BIRTH",
+  "noise": "CESW",
+  "latHint": "Think jewelry.",
+  "pivHint": "The STONE the builders rejected has become the cornerstone, the psalmist says. A gem tied to the month you were born is called a ______stone.",
+  "winText": "You found it. STONE isn't just a word in today's verse — a gem for your birth month is a BIRTHstone.",
+  "lossText": "The word was BIRTH. STONE was the pivot — a gem for your birth month is a BIRTHstone.",
+  "gridString": "LEYESBOENTTUROWIOIDALGNLSHBREDTODAYC",
+  "votdRef": "Psalm 118:24",
+  "votdVerse": "The Lord has done it this very day; let us rejoice today and be glad.",
+  "passRef": "Psalm 118:22-24",
+  "passageText": "The stone the builders rejected has become the cornerstone; the Lord has done this, and it is marvelous in our eyes. The Lord has done it this very day; let us rejoice today and be glad."
+}

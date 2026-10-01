@@ -1,0 +1,25 @@
+{
+  "theme": "JOHN 6:35",
+  "words": [
+    "BREAD",
+    "COMES",
+    "NEVER",
+    "LIFE",
+    "DOWN",
+    "TOLD",
+    "SEEN"
+  ],
+  "SIZE": 6,
+  "pivot": "BREAD",
+  "target": "CRUMB",
+  "noise": "ABEG",
+  "latHint": "Think fairy-tale trails.",
+  "pivHint": "I am the BREAD of life, Jesus says. Hansel and Gretel left a trail of bread ______s.",
+  "winText": "You found it. BREAD isn't just a word in today's verse — Hansel and Gretel left a trail of bread CRUMBs.",
+  "lossText": "The word was CRUMB. BREAD was the pivot — Hansel and Gretel left a trail of bread CRUMBs.",
+  "gridString": "BCOMESREVENTEFILEOABACELDOWNSDBEGMUR",
+  "votdRef": "John 6:35",
+  "votdVerse": "Then Jesus declared, “I am the bread of life. Whoever comes to me will never go hungry, and whoever believes in me will never be thirsty.",
+  "passRef": "John 6:33-36",
+  "passageText": "For the bread of God is the bread that comes down from heaven and gives life to the world.” “Sir,” they said, “always give us this bread.” Then Jesus declared, “I am the bread of life. Whoever comes to me will never go hungry, and whoever believes in me will never be thirsty. But as I told you, you have seen me and still you do not believe."
+}

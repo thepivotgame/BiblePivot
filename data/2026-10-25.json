@@ -1,0 +1,25 @@
+{
+  "theme": "MICAH 6:8",
+  "words": [
+    "MERCY",
+    "SHOWN",
+    "OFFER",
+    "GOOD",
+    "LOVE",
+    "WALK",
+    "LORD"
+  ],
+  "SIZE": 6,
+  "pivot": "WALK",
+  "target": "SPACE",
+  "noise": "HT",
+  "latHint": "Think astronauts.",
+  "pivHint": "Walk humbly with your God, Micah writes. When an astronaut steps outside the station, it is called a ______walk.",
+  "winText": "You found it. WALK isn't just a word in today's verse — an astronaut outside the station takes a SPACEwalk.",
+  "lossText": "The word was SPACE. WALK was the pivot — an astronaut outside the station takes a SPACEwalk.",
+  "gridString": "MSHOWNEGLFALROOFLOCOVEKRYDERHDESCAPT",
+  "votdRef": "Micah 6:8",
+  "votdVerse": "He has shown you, O mortal, what is good. And what does the Lord require of you? To act justly and to love mercy and to walk humbly with your God.",
+  "passRef": "Micah 6:6-8",
+  "passageText": "With what shall I come before the Lord and bow down before the exalted God? Shall I come before him with burnt offerings, with calves a year old? Will the Lord be pleased with thousands of rams, with ten thousand rivers of olive oil? Shall I offer my firstborn for my transgression, the fruit of my body for the sin of my soul? He has shown you, O mortal, what is good. And what does the Lord require of you? To act justly and to love mercy and to walk humbly with your God."
+}

@@ -1,0 +1,25 @@
+{
+  "theme": "COLOSSIANS 3:23",
+  "words": [
+    "HEART",
+    "HUMAN",
+    "FAVOR",
+    "WORK",
+    "LORD",
+    "KNOW",
+    "OBEY"
+  ],
+  "SIZE": 6,
+  "pivot": "FAVOR",
+  "target": "PARTY",
+  "noise": "DEILMO",
+  "latHint": "Think birthdays.",
+  "pivHint": "Do not work only to curry their FAVOR, Paul writes. A small gift given to guests at a celebration is called a ______ favor.",
+  "winText": "You found it. FAVOR isn't just a word in today's verse — a small gift for guests is a PARTY favor.",
+  "lossText": "The word was PARTY. FAVOR was the pivot — a small gift for guests is a PARTY favor.",
+  "gridString": "HLORDLEUOBYIAWMMERROVAFYTRWONKDKEATP",
+  "votdRef": "Colossians 3:23",
+  "votdVerse": "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters,",
+  "passRef": "Colossians 3:22-24",
+  "passageText": "Slaves, obey your earthly masters in everything; and do it, not only when their eye is on you and to curry their favor, but with sincerity of heart and reverence for the Lord. Whatever you do, work at it with all your heart, as working for the Lord, not for human masters, since you know that you will receive an inheritance from the Lord as a reward. It is the Lord Christ you are serving."
+}

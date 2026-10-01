@@ -1,0 +1,25 @@
+{
+  "theme": "PSALM 51:10",
+  "words": [
+    "HEART",
+    "RENEW",
+    "GRANT",
+    "PURE",
+    "CAST",
+    "HOLY",
+    "WILL"
+  ],
+  "SIZE": 6,
+  "pivot": "CAST",
+  "target": "SPELL",
+  "noise": "ADHL",
+  "latHint": "Think wizards.",
+  "pivHint": "Do not CAST me from your presence, David pleads. In a fairy tale, a wizard will cast a ______.",
+  "winText": "You found it. CAST isn't just a word in today's verse — a wizard casts a SPELL.",
+  "lossText": "The word was SPELL. CAST was the pivot — a wizard casts a SPELL.",
+  "gridString": "HAGEPHEERUPOACASTLRENEWYTLTLSDWILLLH",
+  "votdRef": "Psalm 51:10",
+  "votdVerse": "Create in me a pure heart, O God, and renew a steadfast spirit within me.",
+  "passRef": "Psalm 51:10-12",
+  "passageText": "Create in me a pure heart, O God, and renew a steadfast spirit within me. Do not cast me from your presence or take your Holy Spirit from me. Restore to me the joy of your salvation and grant me a willing spirit, to sustain me."
+}

@@ -1,0 +1,25 @@
+{
+  "theme": "PSALM 19:1",
+  "words": [
+    "GLORY",
+    "SKIES",
+    "HANDS",
+    "WORK",
+    "TENT",
+    "POUR",
+    "ENDS"
+  ],
+  "SIZE": 6,
+  "pivot": "ENDS",
+  "target": "LOOSE",
+  "noise": "DPR",
+  "latHint": "Think untied knots.",
+  "pivHint": "Their words go out to the ENDS of the world, the psalmist says. Unresolved details you must tie up are called ______ ends.",
+  "winText": "You found it. ENDS isn't just a word in today's verse — unresolved details are LOOSE ends.",
+  "lossText": "The word was LOOSE. ENDS was the pivot — unresolved details are LOOSE ends.",
+  "gridString": "GSKIESLDRTPDONOEONRAWNUEYHRTRDLPSOEO",
+  "votdRef": "Psalm 19:1",
+  "votdVerse": "The heavens declare the glory of God; the skies proclaim the work of his hands.",
+  "passRef": "Psalm 19:1-4",
+  "passageText": "The heavens declare the glory of God; the skies proclaim the work of his hands. Day after day they pour forth speech; night after night they reveal knowledge. They have no speech, they use no words; no sound is heard from them. Yet their voice goes out into all the earth, their words to the ends of the world. In the heavens God has pitched a tent for the sun."
+}

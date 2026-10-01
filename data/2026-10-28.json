@@ -1,0 +1,25 @@
+{
+  "theme": "HEBREWS 11:1",
+  "words": [
+    "FAITH",
+    "SPOKE",
+    "OFFER",
+    "HOPE",
+    "SEEN",
+    "ABEL",
+    "CAIN"
+  ],
+  "SIZE": 6,
+  "pivot": "SPOKE",
+  "target": "WHEEL",
+  "noise": "ADKNT",
+  "latHint": "Think bicycles.",
+  "pivHint": "God SPOKE well of Abel's offerings, the writer says. A thin rod running from the hub to the rim of a ______ is called a spoke.",
+  "winText": "You found it. SPOKE isn't just a word in today's verse — a bicycle WHEEL has a spoke.",
+  "lossText": "The word was WHEEL. SPOKE was the pivot — a bicycle WHEEL has a spoke.",
+  "gridString": "FSPOKEAEHFEPIEDFLOTNEETHHLBRKWCAINAN",
+  "votdRef": "Hebrews 11:1",
+  "votdVerse": "Now faith is confidence in what we hope for and assurance about what we do not see.",
+  "passRef": "Hebrews 11:1-4",
+  "passageText": "Now faith is confidence in what we hope for and assurance about what we do not see. This is what the ancients were commended for. By faith we understand that the universe was formed at God’s command, so that what is seen was not made out of what was visible. By faith Abel brought God a better offering than Cain did. By faith he was commended as righteous, when God spoke well of his offerings. And by faith Abel still speaks, even though he is dead."
+}

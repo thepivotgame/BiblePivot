@@ -1,0 +1,25 @@
+{
+  "theme": "JEREMIAH 17:7",
+  "words": [
+    "BLESS",
+    "TRUST",
+    "WATER",
+    "TREE",
+    "HEAT",
+    "ROOT",
+    "FEAR"
+  ],
+  "SIZE": 6,
+  "pivot": "ROOT",
+  "target": "CANAL",
+  "noise": "DEPT",
+  "latHint": "Think dentist.",
+  "pivHint": "The tree sends out its ROOTs by the stream, Jeremiah writes. A painful dental procedure is called a root ______.",
+  "winText": "You found it. ROOT isn't just a word in today's verse — a painful dental procedure is a root CANAL.",
+  "lossText": "The word was CANAL. ROOT was the pivot — a painful dental procedure is a root CANAL.",
+  "gridString": "BTRUSTLREOHTEETEOFSEANETSTWAAEDPRCLA",
+  "votdRef": "Jeremiah 17:7",
+  "votdVerse": "“But blessed is the one who trusts in the Lord, whose confidence is in him.",
+  "passRef": "Jeremiah 17:7-8",
+  "passageText": "“But blessed is the one who trusts in the Lord, whose confidence is in him. They will be like a tree planted by the water that sends out its roots by the stream. It does not fear when heat comes; its leaves are always green. It has no worries in a year of drought and never fails to bear fruit.”"
+}

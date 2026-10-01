@@ -1,0 +1,25 @@
+{
+  "theme": "JOHN 10:10",
+  "words": [
+    "THIEF",
+    "STEAL",
+    "SAVED",
+    "KILL",
+    "LIFE",
+    "GATE",
+    "FULL"
+  ],
+  "SIZE": 6,
+  "pivot": "GATE",
+  "target": "WATER",
+  "noise": "DEILMO",
+  "latHint": "Think a 1970s political scandal.",
+  "pivHint": "Jesus says, 'I am the GATE,' John records. The 1970s scandal that toppled a US president is named after a Washington complex: ______gate.",
+  "winText": "You found it. GATE isn't just a word in today's verse — the 1970s scandal was named WATERgate.",
+  "lossText": "The word was WATER. GATE was the pivot — the 1970s scandal was named WATERgate.",
+  "gridString": "SKILLLATIOFAVFEGUIEWDALMDETTLRTHIEFE",
+  "votdRef": "John 10:10",
+  "votdVerse": "The thief comes only to steal and kill and destroy; I have come that they may have life, and have it to the full.",
+  "passRef": "John 10:9-10",
+  "passageText": "I am the gate; whoever enters through me will be saved. They will come in and go out, and find pasture. The thief comes only to steal and kill and destroy; I have come that they may have life, and have it to the full."
+}

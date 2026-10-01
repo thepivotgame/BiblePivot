@@ -1,0 +1,25 @@
+{
+  "theme": "1 CORINTHIANS 13:6",
+  "words": [
+    "TRUTH",
+    "PROUD",
+    "BOAST",
+    "LOVE",
+    "EVIL",
+    "KIND",
+    "ENVY"
+  ],
+  "SIZE": 6,
+  "pivot": "ENVY",
+  "target": "GREEN",
+  "noise": "ADSW",
+  "latHint": "Think color.",
+  "pivHint": "Love does not ENVY, Paul writes. A jealous person is said to be ______ with envy.",
+  "winText": "You found it. ENVY isn't just a word in today's verse — a jealous person is GREEN with envy.",
+  "lossText": "The word was GREEN. ENVY was the pivot — a jealous person is GREEN with envy.",
+  "gridString": "KHTURTISDGSENLRAENDUORPVABNVWYEVILEE",
+  "votdRef": "1 Corinthians 13:6",
+  "votdVerse": "Love does not delight in evil but rejoices with the truth.",
+  "passRef": "1 Corinthians 13:4-7",
+  "passageText": "Love is patient, love is kind. It does not envy, it does not boast, it is not proud. It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. Love does not delight in evil but rejoices with the truth. It always protects, always trusts, always hopes, always perseveres."
+}

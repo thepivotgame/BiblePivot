@@ -1,0 +1,25 @@
+{
+  "theme": "2 CORINTHIANS 10:5",
+  "words": [
+    "WORLD",
+    "POWER",
+    "FIGHT",
+    "WAGE",
+    "TAKE",
+    "MAKE",
+    "SETS"
+  ],
+  "SIZE": 6,
+  "pivot": "POWER",
+  "target": "SOLAR",
+  "noise": "DEH",
+  "latHint": "Think sunshine.",
+  "pivHint": "The weapons we fight with have divine POWER, Paul writes. Energy collected from the sun is called ______ power.",
+  "winText": "You found it. POWER isn't just a word in today's verse — energy from the sun is called SOLAR power.",
+  "lossText": "The word was SOLAR. POWER was the pivot — energy from the sun is called SOLAR power.",
+  "gridString": "WTAKESOHMAKERGSRGTLIEAHSDFWOADPOWERL",
+  "votdRef": "2 Corinthians 10:5",
+  "votdVerse": "We demolish arguments and every pretension that sets itself up against the knowledge of God, and we take captive every thought to make it obedient to Christ.",
+  "passRef": "2 Corinthians 10:3-5",
+  "passageText": "For though we live in the world, we do not wage war as the world does. The weapons we fight with are not the weapons of the world. On the contrary, they have divine power to demolish strongholds. We demolish arguments and every pretension that sets itself up against the knowledge of God, and we take captive every thought to make it obedient to Christ."
+}

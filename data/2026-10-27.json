@@ -1,0 +1,25 @@
+{
+  "theme": "ISAIAH 41:10",
+  "words": [
+    "JACOB",
+    "EARTH",
+    "RIGHT",
+    "HAND",
+    "FEAR",
+    "HELP",
+    "CALL"
+  ],
+  "SIZE": 6,
+  "pivot": "RIGHT",
+  "target": "ANGLE",
+  "noise": "MR",
+  "latHint": "Think geometry.",
+  "pivHint": "I will uphold you with my righteous RIGHT hand, God says. A corner of exactly ninety degrees is called a right ______.",
+  "winText": "You found it. RIGHT isn't just a word in today's verse — a ninety-degree corner is a right ANGLE.",
+  "lossText": "The word was ANGLE. RIGHT was the pivot — a ninety-degree corner is a right ANGLE.",
+  "gridString": "JEARTHAFHICACEEGANOALHLDBRPTLGMAENRL",
+  "votdRef": "Isaiah 41:10",
+  "votdVerse": "So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand.",
+  "passRef": "Isaiah 41:8-10",
+  "passageText": "“But you, Israel, my servant, Jacob, whom I have chosen, you descendants of Abraham my friend, I took you from the ends of the earth, from its farthest corners I called you. I said, ‘You are my servant’; I have chosen you and have not rejected you. So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand."
+}

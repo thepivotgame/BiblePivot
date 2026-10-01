@@ -1,0 +1,25 @@
+{
+  "theme": "PHILIPPIANS 4:9",
+  "words": [
+    "LEARN",
+    "HEARD",
+    "PEACE",
+    "TRUE",
+    "PURE",
+    "SEEN",
+    "SUCH"
+  ],
+  "SIZE": 6,
+  "pivot": "TRUE",
+  "target": "NORTH",
+  "noise": "EFIUW",
+  "latHint": "Think compass.",
+  "pivHint": "Whatever is TRUE, think about such things, Paul writes. The direction of the geographic pole, as opposed to the magnetic one, is called true ______.",
+  "winText": "You found it. TRUE isn't just a word in today's verse — the pole direction on a compass is TRUE NORTH.",
+  "lossText": "The word was NORTH. TRUE was the pivot — the pole direction on a compass is TRUE NORTH.",
+  "gridString": "PSUCHLUECAEPRITAASEURTRERNFNDEWUHOEN",
+  "votdRef": "Philippians 4:9",
+  "votdVerse": "Whatever you have learned or received or heard from me, or seen in me—put it into practice. And the God of peace will be with you.",
+  "passRef": "Philippians 4:8-9",
+  "passageText": "Finally, brothers and sisters, whatever is true, whatever is noble, whatever is right, whatever is pure, whatever is lovely, whatever is admirable—if anything is excellent or praiseworthy—think about such things. Whatever you have learned or received or heard from me, or seen in me—put it into practice. And the God of peace will be with you."
+}

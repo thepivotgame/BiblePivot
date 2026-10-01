@@ -1,0 +1,25 @@
+{
+  "theme": "JEREMIAH 29:11",
+  "words": [
+    "PLANS",
+    "PLACE",
+    "YEARS",
+    "KNOW",
+    "GIVE",
+    "HOPE",
+    "HARM"
+  ],
+  "SIZE": 6,
+  "pivot": "PLANS",
+  "target": "FLOOR",
+  "noise": "EHSTV",
+  "latHint": "Think architects.",
+  "pivHint": "God says he knows the PLANS he has for you, Jeremiah writes. A drawing of a building's layout is called a ______ plan.",
+  "winText": "You found it. PLANS isn't just a word in today's verse — a drawing of a building's layout is a FLOOR plan.",
+  "lossText": "The word was FLOOR. PLANS was the pivot — a drawing of a building's layout is a FLOOR plan.",
+  "gridString": "PKOEYELLNEPHAVAOHANRHCWRSGIVEMRSFTLO",
+  "votdRef": "Jeremiah 29:11",
+  "votdVerse": "For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future.",
+  "passRef": "Jeremiah 29:10-11",
+  "passageText": "This is what the Lord says: “When seventy years are completed for Babylon, I will come to you and fulfill my good promise to bring you back to this place. For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future."
+}

@@ -1,0 +1,25 @@
+{
+  "theme": "GALATIANS 6:10",
+  "words": [
+    "FAITH",
+    "WEARY",
+    "DOING",
+    "GOOD",
+    "TIME",
+    "REAP",
+    "GIVE"
+  ],
+  "SIZE": 6,
+  "pivot": "TIME",
+  "target": "PRIME",
+  "noise": "ADHL",
+  "latHint": "Think evening television.",
+  "pivHint": "At the proper TIME we will reap a harvest, Paul writes. The evening hours when TV audiences are largest are called ______ time.",
+  "winText": "You found it. TIME isn't just a word in today's verse — the evening hours of peak TV audience are PRIME time.",
+  "lossText": "The word was PRIME. TIME was the pivot — the evening hours of peak TV audience are PRIME time.",
+  "gridString": "FWEARYADOINGIGRLEOTIMEPOHVHAADIEDRMP",
+  "votdRef": "Galatians 6:10",
+  "votdVerse": "Therefore, as we have opportunity, let us do good to all people, especially to those who belong to the family of believers.",
+  "passRef": "Galatians 6:9-10",
+  "passageText": "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up. Therefore, as we have opportunity, let us do good to all people, especially to those who belong to the family of believers."
+}

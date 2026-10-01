@@ -1,0 +1,25 @@
+{
+  "theme": "PSALM 55:22",
+  "words": [
+    "CARES",
+    "NEVER",
+    "SHAKE",
+    "CAST",
+    "LORD",
+    "DOWN",
+    "LIVE"
+  ],
+  "SIZE": 6,
+  "pivot": "DOWN",
+  "target": "TOUCH",
+  "noise": "JPS",
+  "latHint": "Think football.",
+  "pivHint": "God will bring the wicked DOWN into the pit of decay, David writes. A six-point scoring play in football is called a ______down.",
+  "winText": "You found it. DOWN isn't just a word in today's verse — a six-point football score is a TOUCHdown.",
+  "lossText": "The word was TOUCH. DOWN was the pivot — a six-point football score is a TOUCHdown.",
+  "gridString": "LCARESOCASTLREVENIDOWNOVCSHAKESHPJUT",
+  "votdRef": "Psalm 55:22",
+  "votdVerse": "Cast your cares on the Lord and he will sustain you; he will never let the righteous be shaken.",
+  "passRef": "Psalm 55:22-23",
+  "passageText": "Cast your cares on the Lord and he will sustain you; he will never let the righteous be shaken. But you, God, will bring down the wicked into the pit of decay; the bloodthirsty and deceitful will not live out half their days. But as for me, I trust in you."
+}

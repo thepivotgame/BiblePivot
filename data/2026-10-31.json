@@ -1,0 +1,25 @@
+{
+  "theme": "2 TIMOTHY 1:7",
+  "words": [
+    "FLAME",
+    "TIMID",
+    "POWER",
+    "GIFT",
+    "HAND",
+    "LOVE",
+    "LORD"
+  ],
+  "SIZE": 6,
+  "pivot": "GIFT",
+  "target": "HORSE",
+  "noise": "PT",
+  "latHint": "Think teeth.",
+  "pivHint": "Fan into flame the GIFT of God, Paul writes. The saying goes: never look a gift ______ in the mouth.",
+  "winText": "You found it. GIFT isn't just a word in today's verse — you never look a gift HORSE in the mouth.",
+  "lossText": "The word was HORSE. GIFT was the pivot — you never look a gift HORSE in the mouth.",
+  "gridString": "FTIMIDLPOWERAGIFTHMOEHPAEVOLSNTRLORD",
+  "votdRef": "2 Timothy 1:7",
+  "votdVerse": "For the Spirit God gave us does not make us timid, but gives us power, love and self-discipline.",
+  "passRef": "2 Timothy 1:6-8",
+  "passageText": "For this reason I remind you to fan into flame the gift of God, which is in you through the laying on of my hands. For the Spirit God gave us does not make us timid, but gives us power, love and self-discipline. So do not be ashamed of the testimony about our Lord or of me his prisoner. Rather, join with me in suffering for the gospel, by the power of God."
+}

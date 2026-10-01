@@ -1,0 +1,25 @@
+{
+  "theme": "COLOSSIANS 3:13",
+  "words": [
+    "LOVED",
+    "UNITY",
+    "BINDS",
+    "HOLY",
+    "BEAR",
+    "KIND",
+    "LORD"
+  ],
+  "SIZE": 6,
+  "pivot": "BEAR",
+  "target": "POLAR",
+  "noise": "CESW",
+  "latHint": "Think Arctic.",
+  "pivHint": "BEAR with each other, Paul writes. A large white animal of the Arctic is called a ______ bear.",
+  "winText": "You found it. BEAR isn't just a word in today's verse — the big white Arctic animal is a POLAR bear.",
+  "lossText": "The word was POLAR. BEAR was the pivot — the big white Arctic animal is a POLAR bear.",
+  "gridString": "BUNITYEKINDBAHSRLIROORCNWLOVEDPYEAOS",
+  "votdRef": "Colossians 3:13",
+  "votdVerse": "Bear with each other and forgive one another if any of you has a grievance against someone. Forgive as the Lord forgave you.",
+  "passRef": "Colossians 3:12-14",
+  "passageText": "Therefore, as God’s chosen people, holy and dearly loved, clothe yourselves with compassion, kindness, humility, gentleness and patience. Bear with each other and forgive one another if any of you has a grievance against someone. Forgive as the Lord forgave you. And over all these virtues put on love, which binds them all together in perfect unity."
+}

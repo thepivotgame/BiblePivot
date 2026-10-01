@@ -1,0 +1,25 @@
+{
+  "theme": "RUTH 1:16",
+  "words": [
+    "DEATH",
+    "LEAVE",
+    "NAOMI",
+    "URGE",
+    "TURN",
+    "STAY",
+    "RUTH"
+  ],
+  "SIZE": 6,
+  "pivot": "TURN",
+  "target": "TABLE",
+  "noise": "PRSW",
+  "latHint": "Think vinyl records.",
+  "pivHint": "Don't urge me to TURN back from you, Ruth says. The spinning platform on which a vinyl record plays is called a turn______.",
+  "winText": "You found it. TURN isn't just a word in today's verse — a record spins on a turnTABLE.",
+  "lossText": "The word was TABLE. TURN was the pivot — a record spins on a turnTABLE.",
+  "gridString": "LRUTHSEGRUTTABWRAAVAPNEYEERSDTNAOMIL",
+  "votdRef": "Ruth 1:16",
+  "votdVerse": "But Ruth replied, “Don’t urge me to leave you or to turn back from you. Where you go I will go, and where you stay I will stay. Your people will be my people and your God my God.",
+  "passRef": "Ruth 1:16-18",
+  "passageText": "But Ruth replied, “Don’t urge me to leave you or to turn back from you. Where you go I will go, and where you stay I will stay. Your people will be my people and your God my God. Where you die I will die, and there I will be buried. May the Lord deal with me, be it ever so severely, if even death separates you and me.” When Naomi realized that Ruth was determined to go with her, she stopped urging her."
+}

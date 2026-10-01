@@ -1,0 +1,25 @@
+{
+  "theme": "1 JOHN 4:19",
+  "words": [
+    "CLAIM",
+    "HATES",
+    "FIRST",
+    "LOVE",
+    "SEEN",
+    "LIAR",
+    "GIVE"
+  ],
+  "SIZE": 6,
+  "pivot": "FIRST",
+  "target": "CLASS",
+  "noise": "EGIMTU",
+  "latHint": "Think airplane seats.",
+  "pivHint": "We love because God FIRST loved us, John writes. The most luxurious cabin on an airplane is called first ______.",
+  "winText": "You found it. FIRST isn't just a word in today's verse — the luxury airline cabin is called first CLASS.",
+  "lossText": "The word was CLASS. FIRST was the pivot — the luxury airline cabin is called first CLASS.",
+  "gridString": "CHATESLMCSVEAGGROEIRAILNMIEFVALUSSTE",
+  "votdRef": "1 John 4:19",
+  "votdVerse": "We love because he first loved us.",
+  "passRef": "1 John 4:19-21",
+  "passageText": "We love because he first loved us. Whoever claims to love God yet hates a brother or sister is a liar. For whoever does not love their brother and sister, whom they have seen, cannot love God, whom they have not seen. And he has given us this command: Anyone who loves God must also love their brother and sister."
+}

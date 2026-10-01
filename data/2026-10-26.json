@@ -1,0 +1,25 @@
+{
+  "theme": "DEUTERONOMY 31:6",
+  "words": [
+    "NEVER",
+    "LEAVE",
+    "MOSES",
+    "LORD",
+    "LAND",
+    "GIVE",
+    "GOES"
+  ],
+  "SIZE": 6,
+  "pivot": "LAND",
+  "target": "SLIDE",
+  "noise": "AFH",
+  "latHint": "Think a mountain after heavy rain.",
+  "pivHint": "You must divide the LAND among them, Moses says. When a hillside suddenly collapses in heavy rain, it is called a land______.",
+  "winText": "You found it. LAND isn't just a word in today's verse — a collapsing hillside is a landSLIDE.",
+  "lossText": "The word was SLIDE. LAND was the pivot — a collapsing hillside is a landSLIDE.",
+  "gridString": "LMOSESOAADVNRGNLAEDOIDEVEESVLEFSIHER",
+  "votdRef": "Deuteronomy 31:6",
+  "votdVerse": "Be strong and courageous. Do not be afraid or terrified because of them, for the Lord your God goes with you; he will never leave you nor forsake you.”",
+  "passRef": "Deuteronomy 31:6-8",
+  "passageText": "Be strong and courageous. Do not be afraid or terrified because of them, for the Lord your God goes with you; he will never leave you nor forsake you.” Then Moses summoned Joshua and said to him in the presence of all Israel, “Be strong and courageous, for you must go with this people into the land that the Lord swore to their ancestors to give them, and you must divide it among them as their inheritance. The Lord himself goes before you and will be with you; he will never leave you nor forsake you. Do not be afraid; do not be discouraged.”"
+}

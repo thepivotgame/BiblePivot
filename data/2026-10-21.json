@@ -1,0 +1,25 @@
+{
+  "theme": "PSALM 24:1",
+  "words": [
+    "EARTH",
+    "WORLD",
+    "WATER",
+    "LORD",
+    "LIVE",
+    "SEAS",
+    "HOLY"
+  ],
+  "SIZE": 6,
+  "pivot": "HOLY",
+  "target": "GRAIL",
+  "noise": "DEPT",
+  "latHint": "Think King Arthur's knights.",
+  "pivHint": "Who may stand in his HOLY place? the psalmist asks. Arthurian knights quested for the Holy ______.",
+  "winText": "You found it. HOLY isn't just a word in today's verse — Arthur's knights sought the Holy GRAIL.",
+  "lossText": "The word was GRAIL. HOLY was the pivot — Arthur's knights sought the Holy GRAIL.",
+  "gridString": "EWORLDAAEIOSRTVHRETEAODAHRGLTSPILYDR",
+  "votdRef": "Psalm 24:1",
+  "votdVerse": "The earth is the Lord’s, and everything in it, the world, and all who live in it;",
+  "passRef": "Psalm 24:1-4",
+  "passageText": "The earth is the Lord’s, and everything in it, the world, and all who live in it; for he founded it on the seas and established it on the waters. Who may ascend the mountain of the Lord? Who may stand in his holy place? The one who has clean hands and a pure heart, who does not trust in an idol or swear by a false god."
+}

@@ -1,0 +1,25 @@
+{
+  "theme": "PROVERBS 22:6",
+  "words": [
+    "START",
+    "TEACH",
+    "ALONG",
+    "TURN",
+    "TALK",
+    "ROAD",
+    "HOME"
+  ],
+  "SIZE": 6,
+  "pivot": "ROAD",
+  "target": "BLOCK",
+  "noise": "AEPRSW",
+  "latHint": "Think police checkpoints.",
+  "pivHint": "Talk about God's words when you walk along the ROAD, Moses says. A barrier put across a highway to stop traffic is called a road______.",
+  "winText": "You found it. ROAD isn't just a word in today's verse — a barrier across a highway is a road BLOCK.",
+  "lossText": "The word was BLOCK. ROAD was the pivot — a barrier across a highway is a road BLOCK.",
+  "gridString": "STKDWOTEACHTAOLLUHRLORKOTSNPRMCAGEBE",
+  "votdRef": "Proverbs 22:6",
+  "votdVerse": "Start children off on the way they should go, and even when they are old they will not turn from it.",
+  "passRef": "Proverbs 22:6",
+  "passageText": "Start children off on the way they should go, and even when they are old they will not turn from it. Teach them to your children, talking about them when you sit at home and when you walk along the road, when you lie down and when you get up."
+}

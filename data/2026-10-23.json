@@ -1,0 +1,25 @@
+{
+  "theme": "PROVERBS 16:3",
+  "words": [
+    "HEART",
+    "HUMAN",
+    "WEIGH",
+    "PURE",
+    "LORD",
+    "WAYS",
+    "PLAN"
+  ],
+  "SIZE": 6,
+  "pivot": "HEART",
+  "target": "SWEET",
+  "noise": "AFKL",
+  "latHint": "Think Valentine's Day.",
+  "pivHint": "Humans make plans in the HEART, Solomon writes. A loved one on Valentine's Day may be called a ______heart.",
+  "winText": "You found it. HEART isn't just a word in today's verse — a Valentine is a SWEETheart.",
+  "lossText": "The word was SWEET. HEART was the pivot — a Valentine is a SWEETheart.",
+  "gridString": "HGIEWLEUTEAOARMKYRRSUASDTEWPNFPLANLA",
+  "votdRef": "Proverbs 16:3",
+  "votdVerse": "Commit to the Lord whatever you do, and he will establish your plans.",
+  "passRef": "Proverbs 16:1-3",
+  "passageText": "To humans belong the plans of the heart, but from the Lord comes the proper answer of the tongue. All a person’s ways seem pure to them, but motives are weighed by the Lord. Commit to the Lord whatever you do, and he will establish your plans."
+}

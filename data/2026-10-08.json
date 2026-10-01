@@ -1,0 +1,25 @@
+{
+  "theme": "JAMES 5:16",
+  "words": [
+    "FAITH",
+    "RAISE",
+    "OFFER",
+    "SICK",
+    "SINS",
+    "PRAY",
+    "HEAL"
+  ],
+  "SIZE": 6,
+  "pivot": "RAISE",
+  "target": "ALARM",
+  "noise": "DEG",
+  "latHint": "Think emergency warnings.",
+  "pivHint": "The Lord will RAISE them up, James writes. To warn everyone of danger, you raise the ______.",
+  "winText": "You found it. RAISE isn't just a word in today's verse — to warn of danger is to raise the ALARM.",
+  "lossText": "The word was ALARM. RAISE was the pivot — to warn of danger is to raise the ALARM.",
+  "gridString": "FRAISEAESNISIFPHCGTFREKLHOAAAMEAYLRD",
+  "votdRef": "James 5:16",
+  "votdVerse": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective.",
+  "passRef": "James 5:15-16",
+  "passageText": "And the prayer offered in faith will make the sick person well; the Lord will raise them up. If they have sinned, they will be forgiven. Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective."
+}

@@ -1,0 +1,25 @@
+{
+  "theme": "ROMANS 8:28",
+  "words": [
+    "WORKS",
+    "HELPS",
+    "GROAN",
+    "KNOW",
+    "GOOD",
+    "LOVE",
+    "MIND"
+  ],
+  "SIZE": 6,
+  "pivot": "WORKS",
+  "target": "WATER",
+  "noise": "HJOS",
+  "latHint": "Think plumbing.",
+  "pivHint": "In all things God WORKS for the good of those who love him, Paul writes. A town's system of pipes delivering drinking water is called the ______ works.",
+  "winText": "You found it. WORKS isn't just a word in today's verse — a town's drinking-water system is the WATER works.",
+  "lossText": "The word was WATER. WORKS was the pivot — a town's drinking-water system is the WATER works.",
+  "gridString": "WGERHKOHRENGRJLOOAKPWOATSSDWVNMINDOE",
+  "votdRef": "Romans 8:28",
+  "votdVerse": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
+  "passRef": "Romans 8:26-28",
+  "passageText": "In the same way, the Spirit helps us in our weakness. We do not know what we ought to pray for, but the Spirit himself intercedes for us through wordless groans. And he who searches our hearts knows the mind of the Spirit, because the Spirit intercedes for God’s people in accordance with the will of God. And we know that in all things God works for the good of those who love him, who have been called according to his purpose."
+}

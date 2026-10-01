@@ -1,0 +1,25 @@
+{
+  "theme": "PSALM 68:19",
+  "words": [
+    "DAILY",
+    "GUILT",
+    "HEAVY",
+    "LORD",
+    "FREE",
+    "LIKE",
+    "BEAR"
+  ],
+  "SIZE": 6,
+  "pivot": "DAILY",
+  "target": "BREAD",
+  "noise": "OSTVW",
+  "latHint": "Think the Lord's Prayer.",
+  "pivHint": "God DAILY bears our burdens, the psalmist writes. In the Lord's Prayer we ask, 'Give us this day our daily ______.'",
+  "winText": "You found it. DAILY isn't just a word in today's verse — the Lord's Prayer asks for our daily BREAD.",
+  "lossText": "The word was BREAD. DAILY was the pivot — the Lord's Prayer asks for our daily BREAD.",
+  "gridString": "DGUILTAWRFOBISERRELIKEDAYVAEHRDTOVBA",
+  "votdRef": "Psalm 68:19",
+  "votdVerse": "Praise be to the Lord, to God our Savior, who daily bears our burdens.",
+  "passRef": "Psalm 68:19",
+  "passageText": "Praise be to the Lord, to God our Savior, who daily bears our burdens. “I removed the burden from their shoulders; their hands were set free from the basket. My guilt has overwhelmed me like a burden too heavy to bear."
+}
