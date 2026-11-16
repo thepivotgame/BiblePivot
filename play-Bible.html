@@ -1244,6 +1244,7 @@
         </div>
         <p class="hidden" id="view-share-link" style="text-align:center;font-family:-apple-system,sans-serif;font-size:13px;color:#f9d976;font-weight:bold;text-decoration:underline;cursor:pointer;touch-action:manipulation;margin:6px 0;">click here to view sharing window</p>
         <div id="votd-stats-panel"></div>
+        <a href="https://tinyurl.com/RHeersink" target="_blank" rel="noopener" id="reading-plans-link" style="display:block;text-align:center;font-family:-apple-system,sans-serif;font-size:13px;color:#f9d976;font-weight:bold;text-decoration:underline;cursor:pointer;touch-action:manipulation;margin:6px 0;">click here to explore reading plans by Roland Heersink</a>
         <a href="https://www.pivotword.com" target="_blank" rel="noopener" id="pivotword-link" style="display:block;text-align:center;font-family:-apple-system,sans-serif;font-size:13px;color:#f9d976;font-weight:bold;text-decoration:underline;cursor:pointer;touch-action:manipulation;margin:6px 0;">click here to play our other game: PivotWord</a>
 
     </div>
@@ -1262,11 +1263,11 @@
                 <div class="sum-label">💡 The connection</div>
                 <div id="sum-wintext"></div>
             </div>
-            <a class="sum-btn sum-btn-devo" id="sum-devo-btn" href="https://www.bible.com/verse-of-the-day" target="_blank" rel="noopener">
+            <a class="sum-btn sum-btn-devo" id="sum-devo-btn" href="https://tinyurl.com/RHeersink" target="_blank" rel="noopener">
                 <span class="sum-btn-icon"><img src="assets/youversion-icon.png" alt=""></span>
                 <span class="sum-btn-label">
-                    <span class="sum-btn-title">Read today's devotional</span>
-                    <span class="sum-btn-subtitle" id="sum-devo-ref"></span>
+                    <span class="sum-btn-title">Explore my reading plans</span>
+                    <span class="sum-btn-subtitle" id="sum-devo-ref">God for Work and Life</span>
                 </span>
             </a>
             <button class="sum-btn sum-btn-share" id="sum-closebtn">
@@ -1368,6 +1369,7 @@
             startY = e.touches[0].clientY;
         }, { passive: true });
         document.addEventListener('touchmove', function (e) {
+            if (e.target && e.target.closest && e.target.closest('#closure-screen, #closing-notice')) return;
             const atTop = window.scrollY <= 0;
             const pullingDown = e.touches[0].clientY > startY;
             if (atTop && pullingDown) {
@@ -3104,7 +3106,7 @@
             setTimeout(() => {
                 canvas.style.display = 'none';
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                showSummaryPanel(true);
+                afterPlayNotice(true);
             }, 600);
         }, halfDuration);
     }
@@ -3166,7 +3168,7 @@
             setTimeout(() => {
                 canvas.style.display = 'none';
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                showSummaryPanel(false);
+                afterPlayNotice(false);
             }, 600);
         }, halfDuration);
     }
@@ -3178,10 +3180,6 @@
         heading.classList.toggle('sum-loss', !won);
         document.getElementById('sum-target').textContent = P.target;
         document.getElementById('sum-wintext').textContent = won ? P.winText : P.lossText;
-        const devoRef = document.getElementById('sum-devo-ref');
-        if (devoRef) {
-            devoRef.textContent = P.votdRef;
-        }
         const feedbackBtn = document.getElementById('sum-feedback-btn');
         if (feedbackBtn) {
             const fbSubject = encodeURIComponent('PIVOT feedback — ' + todayISO());
@@ -3302,54 +3300,6 @@
         if (sumClose) {
             sumClose.addEventListener('touchend', function(e) { e.preventDefault(); showSharePrompt(); });
             sumClose.addEventListener('click', function(e) { showSharePrompt(); });
-        }
-        const sumDevo = document.getElementById('sum-devo-btn');
-        if (sumDevo) {
-            sumDevo.addEventListener('click', function(e) {
-                e.preventDefault();
-                const today = todayISO(); // 'YYYY-MM-DD', so lexical compare works
-                // Aug 31 is a single leftover day from the old August plan (fixed day 31).
-                // September 2026 is split across 8 YouVersion reading plans, each
-                // covering a fixed date range; dayNum = position within that plan's
-                // own range (resets to 1 at the start of each range) unless a fixed
-                // "day" is given explicitly (as for the Aug 31 entry).
-                const READING_PLANS = [
-                    { start: '2026-08-31', end: '2026-08-31', plan: 74047, day: 31 },
-                    { start: '2026-09-01', end: '2026-09-05', plan: 76187 },
-                    { start: '2026-09-06', end: '2026-09-09', plan: 76502 },
-                    { start: '2026-09-10', end: '2026-09-13', plan: 76719 },
-                    { start: '2026-09-14', end: '2026-09-16', plan: 76836 },
-                    { start: '2026-09-17', end: '2026-09-20', plan: 77037 },
-                    { start: '2026-09-21', end: '2026-09-24', plan: 77263 },
-                    { start: '2026-09-25', end: '2026-09-27', plan: 77374 },
-                    { start: '2026-09-28', end: '2026-09-30', plan: 77439 },
-                    { start: '2026-10-01', end: '2026-10-03', plan: 77472 },
-                    { start: '2026-10-04', end: '2026-10-06', plan: 77621 },
-                    { start: '2026-10-07', end: '2026-10-09', plan: 77611 },
-                    { start: '2026-10-10', end: '2026-10-12', plan: 78018  },
-                    { start: '2026-10-13', end: '2026-10-15', plan: 78139  },
-                    { start: '2026-10-16', end: '2026-10-20', plan: 78385 },
-                    { start: '2026-10-21', end: '2026-10-23', plan: 78407  },
-                    { start: '2026-10-24', end: '2026-10-27', plan: 78716  },
-                    { start: '2026-10-28', end: '2026-10-31', plan: 79011  },
-                     { start:  '2026-11-01', end: '2026-11-30', plan: 74047 }
-                ];
-                const range = READING_PLANS.find(function(r) { return today >= r.start && today <= r.end; });
-                if (!range) {
-                    alert('This feature is not yet active for today\'s date. Please check back soon.');
-                    return;
-                }
-                let dayNum;
-                if (range.day !== undefined) {
-                    dayNum = range.day;
-                } else {
-                    const startDay = parseInt(range.start.split('-')[2], 10);
-                    const todayDay = parseInt(today.split('-')[2], 10);
-                    dayNum = todayDay - startDay + 1;
-                }
-                const url = 'https://www.bible.com/reading-plans/' + range.plan + '/day/' + dayNum;
-                window.open(url, '_blank', 'noopener');
-            });
         }
         const sumNotNow = document.getElementById('sum-notnow');
         if (sumNotNow) {
@@ -3643,7 +3593,112 @@
         _loadAndStart();
     }
 
+    // ── BIBLE PIVOT CLOSING (notices + closing screen) ─────────────────────────
+    // All driven by the player's own device date (todayISO(), which also honours
+    // ?test=true&date=YYYY-MM-DD). Nothing needs to be re-uploaded on the day.
+    //   Nov 20 on  -> message 1      Nov 25 on -> message 2      Nov 30 -> message 3
+    //   Dec 1 on   -> game replaced by the closing screen
+    // Which message a player gets depends on what they have already seen:
+    //   Message 1 (thank-you)  : the first notice a player ever sees, Nov 20-29.
+    //   Message 2 (reminder)   : from Nov 25, only if message 1 was seen BEFORE Nov 25.
+    //   Message 3 (last puzzle): Nov 30, for everyone who has not seen it (even a first visit).
+    // Each shows once per device. A skipped day just slides the message back one day.
+    // The notice appears right after a player FINISHES a puzzle (after the fireworks / rain),
+    // just before the results window, with a single Continue button. It never interrupts play.
+    const CLOSING_DATES = { m1: '2026-11-20', m2: '2026-11-25', m3: '2026-11-30', closed: '2026-12-01' };
+    const CLOSING_MESSAGES = {
+        1: {
+            title: 'Thank you for playing Bible PIVOT!',
+            body: 'Keeping the puzzle in step with my YouVersion reading plans has become more work than I can sustain, so Bible PIVOT will close after <strong>November 30</strong>. PivotWord, our other game, continues! Please keep reading my devotionals in the YouVersion Bible app too.',
+            sign: 'Roland Heersink'
+        },
+        2: {
+            title: 'Bible PIVOT closes after November 30.',
+            body: 'Thank you once again for playing along! Keeping the puzzle in step with my YouVersion reading plans has become more work than I can sustain. PivotWord, our other game, continues, and I hope you’ll keep reading my devotionals in the YouVersion Bible app.',
+            sign: 'Roland Heersink'
+        },
+        3: {
+            title: 'Today is the last Bible PIVOT puzzle.',
+            body: 'Thank you for every day you played! Keeping the puzzle in step with my YouVersion reading plans became more work than I can sustain, so the game closes after today. PivotWord, our other game, continues. Please keep reading my devotionals in the YouVersion Bible app.',
+            sign: 'God bless you,<br>Roland Heersink'
+        }
+    };
+    function closingTestMode() {
+        const params = new URLSearchParams(window.location.search);
+        return !!(params.get('test') && params.get('date'));
+    }
+    function closingSeenKey() {
+        // Test mode uses its own flag so trying dates never touches a real player's state.
+        return closingTestMode() ? 'pivot_closing_notice_test_votd' : 'pivot_closing_notice_v2_votd';
+    }
+    function isGameClosed() {
+        return todayISO() >= CLOSING_DATES.closed;
+    }
+    function closingNoticeDue() {
+        // Returns 1, 2 or 3 when a notice should be shown now, otherwise 0.
+        const t = todayISO();
+        if (t < CLOSING_DATES.m1) return 0;
+        try {
+            if (closingTestMode() && new URLSearchParams(window.location.search).get('reset')) {
+                localStorage.removeItem(closingSeenKey());
+            }
+            let st = JSON.parse(localStorage.getItem(closingSeenKey()) || 'null');
+            if (typeof st !== 'object' || st === null) st = {};
+            let due = 0;
+            if (t >= CLOSING_DATES.m3) {
+                if (!st.m3) { due = 3; st.m3 = true; }
+            } else if (!st.m1) {
+                due = 1;
+                st.m1 = t; // remember the date message 1 was seen
+            } else if (!st.m2 && st.m1 < CLOSING_DATES.m2 && t >= CLOSING_DATES.m2) {
+                due = 2;
+                st.m2 = true;
+            }
+            // Mark as seen as soon as it is shown, so a reload never repeats it.
+            if (due) localStorage.setItem(closingSeenKey(), JSON.stringify(st));
+            return due;
+        } catch (e) {
+            return 0; // storage unavailable: skip rather than nag on every load
+        }
+    }
+    let closingSummaryWon = true; // which results window to open once the notice is dismissed
+    function showClosingNotice(n) {
+        const m = CLOSING_MESSAGES[n];
+        document.getElementById('cn-title').textContent = m.title;
+        document.getElementById('cn-body').innerHTML = m.body;
+        document.getElementById('cn-sign').innerHTML = m.sign;
+        document.getElementById('closing-notice').style.display = 'flex';
+    }
+    function dismissClosingNotice() {
+        document.getElementById('closing-notice').style.display = 'none';
+        showSummaryPanel(closingSummaryWon);
+    }
+    function afterPlayNotice(won) {
+        // Called when the fireworks / rain finish. Shows the closing notice if one is due,
+        // otherwise goes straight to the results window as before.
+        const due = closingNoticeDue();
+        if (due) {
+            closingSummaryWon = won;
+            showClosingNotice(due);
+        } else {
+            showSummaryPanel(won);
+        }
+    }
+    function showClosureScreen() {
+        const loadEl = document.getElementById('loading-msg');
+        if (loadEl) loadEl.style.display = 'none';
+        document.getElementById('closure-screen').style.display = 'flex';
+    }
+
     async function loadAndStart() {
+        if (isGameClosed()) {
+            showClosureScreen();
+            return;
+        }
+        startAfterNotices();
+    }
+
+    async function startAfterNotices() {
         if (shouldShowAugResetNotice()) {
             document.getElementById('aug-reset-notice').style.display = 'flex';
             return;
@@ -3714,6 +3769,33 @@
     window.addEventListener('resize', renderGrid);
     </script>
 
+<!-- Bible PIVOT closing notice — pop-up shown after play on Nov 20-30 (see CLOSING_MESSAGES) -->
+<div id="closing-notice" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9300;align-items:flex-start;justify-content:center;padding:16px;overflow-y:auto;-webkit-overflow-scrolling:touch;">
+  <div style="background:#12122a;border:1px solid #2e2e5a;border-radius:16px;max-width:420px;width:100%;margin:auto;padding:1.5rem 1.25rem 1.25rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;text-align:center;">
+    <p id="cn-title" style="font-size:20px;font-weight:bold;color:#e8b84b;line-height:1.3;margin:0 0 0.8rem;"></p>
+    <p id="cn-body" style="font-size:16px;line-height:1.6;color:#e8e4d9;margin:0 0 0.6rem;"></p>
+    <p id="cn-sign" style="font-size:16px;font-style:italic;line-height:1.5;color:#e8e4d9;margin:0 0 1.2rem;"></p>
+    <a href="https://tinyurl.com/RHeersink" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;margin:0 0 10px;padding:10px 14px;border-radius:10px;background:#2f7d4f;color:#eafbf0;font-size:16px;font-weight:bold;text-decoration:none;touch-action:manipulation;box-sizing:border-box;">Explore the reading plans</a>
+    <a href="https://www.pivotword.com" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;margin:0 0 10px;padding:10px 14px;border-radius:10px;background:#e8b84b;color:#1a1200;font-size:16px;font-weight:bold;text-decoration:none;touch-action:manipulation;box-sizing:border-box;">Play PivotWord</a>
+    <button id="cn-back" type="button" onclick="dismissClosingNotice()" style="display:block;width:100%;min-height:48px;margin:0;padding:10px 14px;border-radius:10px;border:1px solid #4a4a7a;background:rgba(255,255,255,0.12);color:#f0ede6;font-size:16px;font-weight:bold;cursor:pointer;touch-action:manipulation;-webkit-appearance:none;box-sizing:border-box;">Continue</button>
+  </div>
+</div>
+
+<!-- Bible PIVOT closing screen — replaces the whole game from Dec 1 -->
+<div id="closure-screen" style="display:none;position:fixed;inset:0;z-index:9400;background:linear-gradient(160deg,#0d3349 0%,#1a5276 55%,#0d3349 100%);align-items:flex-start;justify-content:center;padding:20px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch;">
+  <div style="max-width:420px;width:100%;margin:auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;text-align:center;">
+    <p style="font-family:Georgia,serif;font-size:26px;letter-spacing:3px;color:#f9d976;margin:0 0 1.2rem;">PIVOT</p>
+    <div style="background:#12122a;border:1px solid #2e2e5a;border-radius:16px;padding:1.5rem 1.25rem 1.25rem;">
+      <p style="font-size:22px;font-weight:bold;color:#e8b84b;line-height:1.3;margin:0 0 0.8rem;">Bible PIVOT has closed.</p>
+      <p style="font-size:16px;line-height:1.6;color:#e8e4d9;margin:0 0 0.6rem;">Thank you for playing! Many of you were touched and encouraged, and it was a joy to share it with you. Keeping the puzzle in step with my YouVersion reading plans became more work than I could sustain. PivotWord, our other game, continues, so come and play. Please keep reading my 100+ reading plans in the YouVersion Bible app too.</p>
+      <p style="font-size:16px;font-style:italic;color:#e8e4d9;margin:0 0 1.2rem;">Roland Heersink</p>
+      <a href="https://tinyurl.com/RHeersink" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;margin:0 0 10px;padding:10px 14px;border-radius:10px;background:#2f7d4f;color:#eafbf0;font-size:16px;font-weight:bold;text-decoration:none;touch-action:manipulation;box-sizing:border-box;">Explore the reading plans</a>
+      <a href="https://www.pivotword.com" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;margin:0;padding:10px 14px;border-radius:10px;background:#e8b84b;color:#1a1200;font-size:16px;font-weight:bold;text-decoration:none;touch-action:manipulation;box-sizing:border-box;">Play PivotWord</a>
+    </div>
+    <p style="font-size:10px;color:#4a6a8a;letter-spacing:0.05em;margin:14px 0 0;">&copy; 2026 Roland Heersink &middot; All rights reserved</p>
+  </div>
+</div>
+
 <!-- August reset notice — one-time pop-up for returning players only -->
 <div id="aug-reset-notice" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9200;align-items:center;justify-content:center;padding:16px;">
   <div style="background:#12122a;border:1px solid #2e2e5a;border-radius:16px;max-width:420px;width:100%;padding:1.5rem 1.5rem 1.25rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;text-align:center;">
@@ -3735,7 +3817,7 @@
   </div>
 </div>
 
-<div id="narr-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9000;display:none;align-items:flex-start;justify-content:center;padding:32px 16px 16px;">
+<div id="narr-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9000;display:none;align-items:center;justify-content:center;padding:16px;">
   <div id="narr-card" style="background:#12122a;border:1px solid #2e2e5a;border-radius:16px;max-width:620px;width:100%;max-height:calc(100vh - 32px);display:flex;flex-direction:column;font-family:Georgia,serif;overflow:hidden;">
 
     <!-- ── Sticky header: always visible ── -->
